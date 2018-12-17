@@ -91,11 +91,11 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 
 \chapter{Lời nói đầu}
 {\bf Đặt vấn đề}\vskip 0.4cm
-+ Vấn đề khi làm việc cá nhân: bạn đang làm việc với một số tập tin và thư mục nào đó (gọi đơn giản là files). Hàng ngày, bạn tiến hành nhiều thay đổi trên các files này. Vào một ngày xấu trời nào đó, bạn cần quay lại thời điểm của những files này cách đây 2 ngày thì bạn phải làm sao?\vskip 0.4cm
++ Vấn đề khi làm việc cá nhân: bạn đang làm việc với một số tập tin và thư mục nào đó (gọi đơn giản là file). Hàng ngày, bạn tiến hành nhiều thay đổi trên các file này. Vào một ngày xấu trời nào đó, bạn cần quay lại thời điểm của những file này cách đây 2 ngày thì bạn phải làm sao?\vskip 0.4cm
 
-+ Vấn đề khi làm việc nhóm: bạn và vài người bạn của bạn đang làm việc trên một số files (project), làm sao để nhiều người làm việc hiệu quả trên các files này (không có những trường hợp ghi đè nội dung của nhau, xóa nhầm files, quản lý được ai thao tác trên các files nào... )\vskip 0.4cm
++ Vấn đề khi làm việc nhóm: bạn và vài người bạn của bạn đang làm việc trên một số file (hay project), làm sao để nhiều người làm việc hiệu quả trên các file này (không có những trường hợp ghi đè nội dung của nhau, xóa nhầm file, quản lý được ai thao tác trên các file nào... )\vskip 0.4cm
 
-Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên nhiều nguồn tài liệu và biết đến công cụ quản lí mã nguồn GIT có thể giải quyết được các vấn đề trên và hơn thế nữa. Sau khi có được chủ đề bài tập lớn, nhóm đã cùng nhau tìm hiểu về lịch sử ra đời của GIT, cách Download và học cách sử dụng GIT một cách hiệu quả. Sau thời gian học tập và tìm kiếm tài liệu trên mạng, thông qua quá trình thực hành nhóm đã có những kiến thức cơ bản nhất. Và dưới đây chính là những kiến thức mà nhóm đã tìm hiểu được về GIT.
+Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên nhiều nguồn tài liệu và biết đến công cụ quản lí mã nguồn có thể giải quyết được các vấn đề trên và hơn thế nữa. Sau khi có được chủ đề bài tập lớn, nhóm đã cùng nhau tìm hiểu về Git - một công cụ quản lý mã nguồn rất phổ biến. Sau thời gian học tập và tìm kiếm tài liệu trên mạng, thông qua quá trình thực hành nhóm đã có những kiến thức cơ bản nhất. Và dưới đây chính là những kiến thức mà nhóm đã tìm hiểu được về Git.
 
 
 \tableofcontents % Lệnh mục lục
@@ -104,7 +104,7 @@ Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên 
 
 %\addcontentsline{toc}{chapter}{{\bf Giới thiệu VCS}\rm} 
 
-\hspace{0.6cm} •	Quản lý phiên bản (VCS) là một hệ thống ghi lại những thay đổi trên một tệp hay tập hợp các tệp theo thời gian để mà chúng ta có thể khôi phục lại các phiên bản trước.
+\hspace{0.6cm} •	Hệ thống quản lý phiên bản (VCS) là một hệ thống ghi lại những thay đổi trên một tệp hay tập hợp các tệp theo thời gian để mà chúng ta có thể khôi phục lại các phiên bản trước.
 \vskip 0.4cm
 •	VCS cho phép chúng ta \\
 - Khôi phục lại phiên bản cũ của tệp hay cả dự án\\
@@ -168,13 +168,13 @@ Ba trạng thái này tạo ra ba phần riêng biệt của dự án:\vskip 0.4
 
 \section{Thiết lập ban đầu} 
 \hspace{0.6cm}{\bf a. Git folder structure ( Cấu trúc thư mục Git)}\vskip 0.4cm
-- Git có một công cụ có sẵn gọi là git config, cho phép ta xem và điều chỉnh các biến cấu hình để điều khiển được mọi khía cạnh của Git \vskip 0.4cm
+- Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta xem và điều chỉnh các biến cấu hình để điều khiển được mọi khía cạnh của Git \vskip 0.4cm
 {\bf b. Danh tính của người dùng}\vskip 0.4cm
 - Điều đầu tiên bạn nên làm sau khi cài đặt Git đó là đặt tên người dùng và địa chỉ email của bạn.\vskip 0.4cm
 - Điều này quan trọng bởi vì mỗi commit trong Git đều sử dụng thông tin này, những thông tin này sẽ mãi gắn với các commit.\vskip 0.4cm
 - Hai thông tin này phải được cái đặt trước khi thực hiện mọi thao tác trên Git vì khi bạn ủy thác thông tin lên Git thì Git sẽ phân biệt và nhận dạng thông qua username và useremail\vskip 0.4cm
-+ Để đặt tên người dùng, ta dùng lệnh:{\it  git config --global user.name “Your name”} \vskip 0.4cm
-+ Để đặt email: {\it git config --global user.email john@example.com}\vskip 0.4cm
++ Để đặt tên người dùng, ta dùng lệnh: {\it  git config \texttt{-{}-}global user.name “Your name”} \vskip 0.4cm
++ Để đặt email: {\it git config \texttt{-{}-}global user.email john@example.com}\vskip 0.4cm
 %\begin{figure}
 	%\centering
 	\includegraphics[width=0.8\linewidth]{screenshot001}
@@ -186,7 +186,7 @@ Ba trạng thái này tạo ra ba phần riêng biệt của dự án:\vskip 0.4
 {\bf c. Trình soạn thảo}\vskip 0.4cm
 - Ở bước cài đặt Git, chúng ta đã chọn Visual Studio Code làm công cụ chỉnh sửa mặc định\vskip 0.4cm
 - Nếu muốn thay đổi công cụ mặc định đã được cài đặt trước đó thì có thể sử dụng lệnh:\vskip 0.4cm
-{\it git config --global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}\vskip 0.4cm
+{\it git config \texttt{-{}-}global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}\vskip 0.4cm
 Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc định cho Git\vskip 0.4cm
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot002}
@@ -194,12 +194,12 @@ Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc đ�
 	\label{fig:screenshot002}
 \vskip 0.4cm \vskip 0.4cm
 {\bf d. Kiểm tra các cài đặt} \vskip 0.4cm
-- Khi muốn kiểm tra các cài đặt, ta dùng lệnh git config --list. Kết quả như hình bên dưới: 
+- Khi muốn kiểm tra các cài đặt, ta dùng lệnh git config \texttt{-{}-}list. Kết quả như hình bên dưới: 
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot003}
 	\label{fig:screenshot003}\vskip 0.4cm\vskip 0.4cm
 
-- Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh:{\it git config \{khoá\}}\vskip 0.4cm
+- Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh: {\it git config \{khoá\}}\vskip 0.4cm
 - Ví dụ như ta muốn xem tên người dùng và địa chỉ email, ta gõ lệnh như trong hình: \vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot004}
@@ -210,8 +210,8 @@ Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc đ�
 {\bf e. Giúp đỡ} \vskip 0.4cm
  - Có ba cách để hiển thị trang hướng dẫn cho các lệnh trong Git \vskip 0.4cm
  + git help <lệnh> \vskip 0.4cm
- + git <lệnh> --help \vskip 0.4cm
- + man git-<lệnh>:  \vskip 0.4cm
+ + git <lệnh> \texttt{-{}-}help \vskip 0.4cm
+ + man git-<lệnh>  \vskip 0.4cm
  
 
 
@@ -219,9 +219,9 @@ Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc đ�
 
 \section{Khởi tạo Repository}
 \hspace{0.6cm}{\bf a. Khởi tạo một repository trong một thư mục có sẵn} \vskip 0.4cm
-- Repository, hay còn gọi là Repo, dịch ra tiếng Việt nghĩa là kho. Repo là nơi chứa tất cả mã nguồn cho một dự án được quản lý bởi Git.\vskip 0.4cm
-- Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: git init\vskip 0.4cm
-- Để di chuyển đến thư mục, ta sử dụng lệnh:{\it cd <đường dẫn thư mục> }\vskip 0.4cm
+- Repository, hay còn gọi là Repo, trong tiếng Việt nghĩa là kho chứa. Repo là nơi chứa tất cả mã nguồn cho một dự án được quản lý bởi Git.\vskip 0.4cm
+- Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: \textit{git init}\vskip 0.4cm
+- Để di chuyển đến thư mục, ta sử dụng lệnh: {\it cd <đường dẫn thư mục> }\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot005}
 
@@ -246,7 +246,7 @@ Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc đ�
 - Modified: tệp đã được chỉnh sửa và chưa commit\vskip 0.4cm
 - Staged: các tệp đã được theo dõi hoặc các tệp đã chỉnh sửa đang chờ để commit\vskip 0.4cm
 {\bf b. Kiểm tra trạng thái của tệp} \vskip 0.4cm
-- Lệnh git status dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.\vskip 0.4cm
+- Lệnh \textit{git status} dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.\vskip 0.4cm
 + Dưới đây, ta kiểm tra trạng thái của thư mục làm việc (working directory) hiện tại là project\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot007}
@@ -289,13 +289,13 @@ Ví dụ: \vskip 0.4cm
 \vskip 0.4cm\vskip 0.4cm
 {\bf d. Xem các thay đổi} \vskip 0.4cm
 - Câu lệnh {\it git status} vẫn còn mơ hồ, ta không thể biết chính xác được cái gì đã được thay đổi\vskip 0.4cm
-- Lệnh{\it git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi\vskip 0.4cm
-- Câu lệnh{\it git diff - -staged} đã được tổ chức (staged) và chuẩn bị được commit.\vskip 0.4cm
+- Lệnh {\it git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi\vskip 0.4cm
+- Câu lệnh {\it git diff \texttt{-{}-}staged} đã được tổ chức (staged) và chuẩn bị được commit.\vskip 0.4cm
 {\bf e. Commit các thay đổi}\vskip 0.4cm
 - Sau khi đã tổ chức các tập tin theo ý muốn, chúng ta có thể commit chúng\vskip 0.4cm
-- Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh git add sẽ không được commit, do những file vẫn đang ở trạng thái modified.\vskip 0.4cm
-- Cách đơn giản để commit đó là dùng lệnh:{\it git commit –m “nội dung của lần commit này”}\vskip 0.4cm
-+ Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh:{\it git commit -m “initial project version”} để commit các tệp đang ở trạng thái staged\vskip 0.4cm
+- Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh \textit{git add} sẽ không được commit, do những file vẫn đang ở trạng thái modified.\vskip 0.4cm
+- Cách đơn giản để commit đó là dùng lệnh: {\it git commit –m “message”}\vskip 0.4cm
++ Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh: {\it git commit -m “initial project version”} (initial project version chính là message, tóm tắt nội dung của lần commit này) để commit các tệp đang ở trạng thái staged\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot012}
 
@@ -303,15 +303,15 @@ Ví dụ: \vskip 0.4cm
 \vskip 0.4cm\vskip 0.4cm
 + Kết quả ta sẽ được như hình trên, tệp test.txt đã được commit.\vskip 0.4cm
 {\bf f. Bỏ qua khu vực tổ chức (staging area)}\vskip 0.4cm
-- Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước git add\vskip 0.4cm
-- Có thế add hết tất cả các tệp untracked vào staged bằng lệnh:{\it git add - -all}\vskip 0.4cm
+- Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước \textit{git add}\vskip 0.4cm
+- Có thế add hết tất cả các tệp untracked vào staged bằng lệnh: {\it git add \texttt{-{}-}all}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot013}
 
 	\label{fig:screenshot013}
 \vskip 0.4cm\vskip 0.4cm
-- Ở hình trên, có 3 tệp untracked, sử dụng{\it git add --all} để đưa cả 3 tệp vào stage area cùng lúc\vskip 0.4cm
-- Sau đó commit 1 lần 3 tệp trên bằng lệnh{\it git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới\vskip 0.4cm
+- Ở hình trên, có 3 tệp untracked, sử dụng {\it git add \texttt{-{}-}all} để đưa cả 3 tệp vào stage area cùng lúc\vskip 0.4cm
+- Sau đó commit 1 lần 3 tệp trên bằng lệnh {\it git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot014}
 
@@ -319,7 +319,7 @@ Ví dụ: \vskip 0.4cm
 
 {\bf g. Xoá tập tin} \vskip 0.4cm
 - {\it git rm}: Xoá một tập tin khỏi staging area, đồng thời cũng xoá tập tin đó trên ổ cứng.\vskip 0.4cm
-- {\it git rm - -cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên đĩa cứng\vskip 0.4cm
+- {\it git rm \texttt{-{}-}cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên ổ cứng\vskip 0.4cm
 
 
 	\includegraphics[width=0.8\linewidth]{screenshot015}
@@ -339,7 +339,7 @@ Ví dụ: \vskip 0.4cm
 	\newpage
 \section{Xem lịch sử commit}
 \hspace{0.6cm}- Áp dụng khi xem lại các dòng code, các đoạn commit có sai sót gì, kiểm tra các đoạn chỉnh sửa những gì\vskip 0.4cm
-- Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh:{\it git log}\vskip 0.4cm
+- Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh: {\it git log}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot017}
 
@@ -353,30 +353,30 @@ Ví dụ: \vskip 0.4cm
 	
 	\label{fig:screenshot018}
 \vskip 0.4cm\vskip 0.4cm
-+ Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh{\it diff --git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
++ Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh {\it diff \texttt{-{}-}git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a, b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
 
-- Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn –stat. Lệnh {\it git log –stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.\vskip 0.4cm
+- Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn \texttt{-{}-}stat. Lệnh {\it git log \texttt{-{}-}stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot019}
 
 	\label{fig:screenshot019}
 \vskip 0.4cm\vskip 0.4cm
 + Như hình trên, Git đã hiện thị vào lần commit lúc 8:35 29/11, đã có 1 tệp thay đổi và tệp đó có thêm 1 dòng\vskip 0.4cm
-- Một lựa chọn hữu ích khác là –pretty. Lựa chọn này thay đổi phần hiển thị theo các cách khác nhau.\vskip 0.4cm
-+ Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: {\it git log –pretty=oneline}\vskip 0.4cm
+- Một lựa chọn hữu ích khác là \texttt{-{}-}pretty. Lựa chọn này thay đổi phần hiển thị theo các cách khác nhau.\vskip 0.4cm
++ Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: {\it git log \texttt{-{}-}pretty=oneline}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot020}
 	
 	\label{fig:screenshot020}
 \vskip 0.4cm\vskip 0.4cm
-+ Ta đã sử dụng {\it option - -pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit\vskip 0.4cm
-+ Lựa chọn thú vị nhất là {\it –pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
++ Ta đã sử dụng {\it option \texttt{-{}-}pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit\vskip 0.4cm
++ Lựa chọn thú vị nhất là {\it \texttt{-{}-}pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot021}
 
 	\label{fig:screenshot021}
 \vskip 0.4cm\vskip 0.4cm
-+ Ví dụ: {\it git log --pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được\vskip 0.4cm
++ Ví dụ: {\it git log \texttt{-{}-}pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot022}
 
@@ -384,13 +384,13 @@ Ví dụ: \vskip 0.4cm
 \vskip 0.4cm\vskip 0.4cm
 + Kết quả hiển thị commit ID thu gọn, tên tác giả, thời gian commit và tin nhắn cho mỗi lần commit. Với các option format này bạn có thể vận dụng cho việc báo cáo về tiến độ và kiểm soát làm việc cho từng thành viên\vskip 0.4cm
  Giới hạn thông tin đầu ra\vskip 0.4cm
-- Các lựa chọn giới hạn thời gian thông tin đầu ra như –since và –until khá hữu ích\vskip 0.4cm
+- Các lựa chọn giới hạn thời gian thông tin đầu ra như \texttt{-{}-}since và \texttt{-{}-}until khá hữu ích\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot023}
 
 	\label{fig:screenshot023}
 \vskip 0.4cm\vskip 0.4cm
-+ Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:{\it git log --pretty="\%h - \%s" --author="Nguyen Quy" --since=2.week }. Kết quả sẽ được:\vskip 0.4cm
++ Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:{\it git log \texttt{-{}-}pretty="\%h - \%s" \texttt{-{}-}author="Nguyen Quy" \texttt{-{}-}since=2.week }. Kết quả sẽ được:\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot024}
 
@@ -416,7 +416,7 @@ Ví dụ: \vskip 0.4cm
 
 	\label{fig:screenshot026}
 \vskip 0.4cm\vskip 0.4cm
-+ Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh:{\it git commit - -amend}\vskip 0.4cm
++ Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh: {\it git commit - -amend}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot027}
 
@@ -438,16 +438,16 @@ Ví dụ: Hai tệp 1.txt và 2.txt đã được chỉnh sửa và đang ở tr
 
 	\label{fig:screenshot029}
 \vskip 0.4cm\vskip 0.4cm
-+ Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh:{\it git reset HEAD 2.txt}. Kết quả sẽ là:\vskip 0.4cm
++ Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh: {\it git reset HEAD 2.txt}. Kết quả sẽ là:\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot030}
 
 	\label{fig:screenshot030}
 \vskip 0.4cm\vskip 0.4cm
 {\bf c. Unmodifying a modified file}\vskip 0.4cm
-- Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh:{\it git checkout - - <tên tệp>}\vskip 0.4cm
+- Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh: {\it git checkout - - <tên tệp>}\vskip 0.4cm
 - Lưu ý rằng đây là một lệnh nguy hiểm – mọi thay đổi của bạn đối với tệp sẽ bị mất. Hãy chắc chắn là bạn thực sự muốn bỏ các thay đổi vừa thực hiện\vskip 0.4cm
-Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh:{\it git checkout - - 2.txt}. Kết quả thu được\vskip 0.4cm
+Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh: {\it git checkout - - 2.txt}. Kết quả thu được\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot031}
 
@@ -574,7 +574,7 @@ Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được c
 {\bf d. Tagging later} \vskip 0.4cm
 - Bạn cũng có thẻ gắn thẻ các commit sau khi bạn đã di chuyển chúng. Để gắn thẻ commit đó: \vskip 0.4cm
 +{\it git log - -pretty=oneline}: Lệnh này để xem lịch sử các commit ở dạng một dòng, dùng để lấy checksum ID của commit\vskip 0.4cm
-+ Sau đó thì thì sử dụng lệnh:{\it git tag  <tag name> <checksum ID>}\vskip 0.4cm
++ Sau đó thì thì sử dụng lệnh: {\it git tag  <tag name> <checksum ID>}\vskip 0.4cm
 Ví dụ: 
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot044}
@@ -583,7 +583,7 @@ Ví dụ:
 \vskip 0.4cm\vskip 0.4cm
 {\bf e. Chia sẻ thẻ} \vskip 0.4cm
 - Lệnh git push không thể chuyển thẻ tới máy chủ\vskip 0.4cm
-- Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh:{\it git push <remote name> <tag name>}\vskip 0.4cm
+- Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh: {\it git push <remote name> <tag name>}\vskip 0.4cm
 - Nếu bạn có nhiều thẻ mà bạn muốn đẩy lên cùng một lúc:{\it git push <remote name> - -tags}\vskip 0.4cm
 - Ví dụ:\vskip 0.4cm
 
@@ -634,7 +634,7 @@ Ví dụ:
 	\label{fig:screenshot050}
 \vskip 0.4cm\vskip 0.4cm
 {\bf a. Tạo một nhánh mới}\vskip 0.4cm
-- Tạo một nhánh mới bằng lệnh:{\it git branch <branch name>}\vskip 0.4cm
+- Tạo một nhánh mới bằng lệnh: {\it git branch <branch name>}\vskip 0.4cm
 - Ví dụ: tạo một branch có tên là testing: git branch testing. Điều này tạo ra một con trỏ mới cho cùng một commit mà bạn đang thực hiện
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot051}
@@ -643,7 +643,7 @@ Ví dụ:
 \vskip 0.4cm\vskip 0.4cm
 {\bf b. Con trỏ HEAD đến nhánh}\vskip 0.4cm
 - Làm thế nào để Git biết bạn hiện đang thao tác ở nhánh nào? Nó được biểu diễn bằng một con trỏ đặc biệt: HEAD\vskip 0.4cm
-- Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh:{\it git log - -oneline - -decorate}\vskip 0.4cm
+- Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh: {\it git log - -oneline - -decorate}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot052}
 	
@@ -677,7 +677,7 @@ Ví dụ:
 
 	\label{fig:screenshot056}
 \vskip 0.4cm\vskip 0.4cm
-- Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh:{\it git branch –D <branch name>}\vskip 0.4cm
+- Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh: {\it git branch –D <branch name>}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot057}
 
@@ -787,7 +787,7 @@ Ví dụ:
 	
 	\label{fig:screenshot065}\vskip 0.4cm\vskip 0.4cm
 
-- Tiến hành thiết lập remote cho nó bằng lệnh:{\it git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là{\it /q/BT/example/remote}\vskip 0.4cm
+- Tiến hành thiết lập remote cho nó bằng lệnh: {\it git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là{\it /q/BT/example/remote}\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot066}
 

@@ -844,7 +844,7 @@ Ví dụ:
  
  	\label{fig:screenshot072}
 \vskip 0.4cm\vskip 0.4cm
- - Tiếp theo, sử dụng lệnh{\it git fetch --all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái\vskip 0.4cm
+ - Tiếp theo, sử dụng lệnh{\it git fetch \texttt{-{}-}all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái\vskip 0.4cm
 
  	\includegraphics[width=0.8\linewidth]{screenshot073}
  
@@ -876,13 +876,13 @@ Ví dụ:
 \vskip 0.4cm\vskip 0.4cm
  - Xóa nhánh tại remote
  \vskip 0.4cm
- {\it \hspace{1cm} \$ git push remotename --delete branchname}\vskip 0.4cm
+ {\it \hspace{1cm} \$ git push remotename \texttt{-{}-}delete branchname}\vskip 0.4cm
  
  - Đổi tên nhánh local và remote\vskip 0.4cm
  
  {\it \hspace{1cm}git branch -m old\_branch new\_branch         \hspace{1cm} \# Đổi tên ở Local\vskip 0.1cm
   \hspace{1cm}git push origin :old\_branch                  \hspace{1cm}\# Xóa nhánh ở Remote\vskip 0.1cm
-  \hspace{1cm}git push --set-upstream origin new\_branch   \# Cập nhật nhánh có tên mới lên  Remote\vskip 0.4cm }
+  \hspace{1cm}git push \texttt{-{}-}set-upstream origin new\_branch   \# Cập nhật nhánh có tên mới lên  Remote\vskip 0.4cm }
 
  - Cập nhật nhánh mới từ remote vào local\vskip 0.4cm
  

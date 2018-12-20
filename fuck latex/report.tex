@@ -18,13 +18,26 @@
 
 \pagestyle{fancy}
 
-\lhead{\it \color{blue}{BTL Nhập môn điện toán }}
-
-\rhead{\it \color{blue}{Trường Đại học Bách Khoa Tp HCM}}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{logg}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Trường Đại Học Bách Khoa Tp.Hồ Chí Minh}\\
+		\textbf{\bf \ttfamily Khoa Khoa Học và Kỹ Thuật Máy Tính}
+	\end{tabular} 	
+ \end{tabular}
+}
 
 \lfoot{\it \color{blue}{Nhóm 1}}
 
-\rfoot{\it  \color{blue}{Khoa KHKT Máy tính năm 2018-2019}}
+\rfoot{\it  \color{blue}{BTL Nhập môn Điện toán}}
 
 \renewcommand{\headrulewidth}{1,2pt}
 
@@ -89,6 +102,8 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 
 \end{titlepage}
 
+\tableofcontents % Lệnh mục lục
+
 \chapter{Lời nói đầu}
 {\bf Đặt vấn đề}\vskip 0.4cm
 \begin{itemize}
@@ -99,7 +114,6 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 \item[$\nabla$] Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên nhiều nguồn tài liệu và biết đến công cụ quản lí mã nguồn có thể giải quyết được các vấn đề trên và hơn thế nữa. Sau khi có được chủ đề bài tập lớn, nhóm đã cùng nhau tìm hiểu về Git - một công cụ quản lý mã nguồn rất phổ biến. Sau thời gian học tập và tìm kiếm tài liệu trên mạng, thông qua quá trình thực hành nhóm đã có những kiến thức cơ bản nhất. Và dưới đây chính là những kiến thức mà nhóm đã tìm hiểu được về Git.
 \end{itemize}
 
-\tableofcontents % Lệnh mục lục
 
 \chapter{Giới thiệu VCS} % Chương 1
 
@@ -501,458 +515,470 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \item Tệp 2.txt đã quay trở lại trước khi thay đổi và Git thông báo không có sự thay đổi nào
 \end{itemize}\end{itemize}
 
-
-
-\newpage
 \section{Làm việc với remote repository}
-\hspace{0.6cm}{\bf a. Tổng quan} \vskip 0.4cm
-- Để có thể cộng tác trên bất kỳ dự án nào với Git, bạn cần biết cách quản lý remote repo (kho lưu trữ từ xa) của mình\vskip 0.4cm
-- Remote repositories (Kho lưu trữ từ xa) là các phiên bản của dự án được lưu trữ trên Internet,  trên một máy chủ được được các tổ chức cung cấp\vskip 0.4cm
-- Cộng tác với những người khác liên quan đến việc quản lý remote repo này, đẩy dữ liệu lên và kéo dữ liệu  từ chúng khi bạn cần chia sẻ công việc\vskip 0.4cm
-- Quản lý remote repository bao gồm biết cách thêm, xóa các điều khiển từ xa không còn hợp lệ, quản lý các nhánh từ xa (remote branch) khác nhau và xác định chúng như đang được theo dõi hay không và hơn thế nữa\vskip 0.4cm
-{\bf b. Hiển thị remotes} \vskip 0.4cm
-- Để xem remote repo nào bạn đã cấu hình, bạn có thể chạy lệnh git remote\vskip 0.4cm
-- Nó liệt kê các tên ngắn của mỗi remote\vskip 0.4cm
-- Nếu bạn đã sao chép remote của mình, bạn nên xem nguồn gốc - đó là tên mặc định mà Git cung cấp cho máy chủ mà bạn đã sao chép. Ví dụ dưới đây ta clone một remote Repo trên github:\vskip 0.4cm
-+ \textit{git clone https://github.com/nguyenquy43/first.git}\vskip 0.4cm
-+ \textit{cd git}\vskip 0.4cm
-+ \textit{git remote} (xem thông tin remote repository bạn mới lưu về máy)\vskip 0.4cm
+\subsection{Tổng quan} 
+\begin{itemize}
+\item Để có thể cộng tác trên bất kỳ dự án nào với Git, bạn cần biết cách quản lý remote repo (kho lưu trữ từ xa) của mình
+\item Remote repositories (Kho lưu trữ từ xa) là các phiên bản của dự án được lưu trữ trên Internet,  trên một máy chủ được được các tổ chức cung cấp
+\item Cộng tác với những người khác liên quan đến việc quản lý remote repo này, đẩy dữ liệu lên và kéo dữ liệu  từ chúng khi bạn cần chia sẻ công việc
+\item Quản lý remote repository bao gồm biết cách thêm, xóa các điều khiển từ xa không còn hợp lệ, quản lý các nhánh từ xa (remote branch) khác nhau và xác định chúng như đang được theo dõi hay không và hơn thế nữa
+\end{itemize}
+\subsection{Hiển thị remotes} 
+\begin{itemize}
+\item Để xem remote repo nào bạn đã cấu hình, bạn có thể chạy lệnh git remote
+\item Nó liệt kê các tên ngắn của mỗi remote
+\item Nếu bạn đã sao chép remote của mình, bạn nên xem nguồn gốc - đó là tên mặc định mà Git cung cấp cho máy chủ mà bạn đã sao chép. 
+\item Ví dụ dưới đây ta clone một remote Repo trên github:
+	\begin{itemize}
+		\item \textit{git clone https://github.com/nguyenquy43/first.git}
+		\item \textit{git remote} (xem thông tin remote repository bạn mới lưu về máy)
 
 	\includegraphics[width=0.8\linewidth]{screenshot032}
 	
 	\label{fig:screenshot032}
-\vskip 0.4cm\vskip 0.4cm
-- Bạn có thể dùng –v để hiển thị URL mà Git đã lưu trữ cho tên ngắn được sử dụng khi đọc và ghi vào remote đó: {\it git remote -v}\vskip 0.4cm
+	\end{itemize}
+\item Bạn có thể dùng –v để hiển thị URL mà Git đã lưu trữ cho tên ngắn được sử dụng khi đọc và ghi vào remote đó: {\it git remote -v}
 
 	\includegraphics[width=0.8\linewidth]{screenshot033}
 	
 	\label{fig:screenshot033}
-\vskip 0.4cm\vskip 0.4cm
-+ fetch là link để ta lấy dữ liệu từ remote, push là link để ghi dữ liệu lên remote\vskip 0.4cm
-{\bf c. Thêm remote repository}\vskip 0.4cm
-- Khi bạn có sẵn một repository trong máy, và bạn muốn liên kết với một remote repository\vskip 0.4cm
-- Để thêm một remote repo mới dưới dạng một tên ngắn: {\it git remote add <shortname> <url>}\vskip 0.4cm
-- Ví dụ: 
+
+	\begin{itemize}
+\item fetch là link để ta lấy dữ liệu từ remote, push là link để ghi dữ liệu lên remote
+\end{itemize}\end{itemize}
+\subsection{Thêm remote repository} 
+\begin{itemize}
+\item Khi bạn có sẵn một repository trong máy, và bạn muốn liên kết với một remote repository
+\item Để thêm một remote repo mới dưới dạng một tên ngắn: {\it git remote add <shortname> <url>}
+\item Ví dụ: 
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot034}
 	
 	\label{fig:screenshot034}
-\vskip 0.4cm\vskip 0.4cm
-{\bf d. Nạp và kéo dữ liệu từ remote repository} \vskip 0.4cm
-- Lệnh đi đến remote repo và kéo tất cả dữ liệu từ remote repo mà bạn chưa có: {\it git fetch <remote name>}\vskip 0.4cm
-- Điều cần lưu ý là lệnh git fetch chỉ tải dữ liệu xuống  local repo của bạn - nó không tự động kết hợp (merge) dữ liệu đó với bất kỳ dữ liệu nào của bạn hoặc sửa đổi những gì bạn hiện đang làm việc\vskip 0.4cm
-- Bạn có thể sử dụng lệnh git pull để tự động tìm nạp và sau đó hợp nhất nhánh từ xa (remote branch) đó vào nhánh hiện tại của bạn: {\it git pull <remote name> <branch name>}\vskip 0.4cm
-- Ví dụ: \vskip 0.4cm
-
+\end{itemize}
+\subsection{Nạp và kéo dữ liệu từ remote repository} 
+\begin{itemize}
+\item Lệnh đi đến remote repo và kéo tất cả dữ liệu từ remote repo mà bạn chưa có: {\it git fetch <remote name>}
+\item Điều cần lưu ý là lệnh git fetch chỉ tải dữ liệu xuống  local repo của bạn - nó không tự động kết hợp (merge) dữ liệu đó với bất kỳ dữ liệu nào của bạn hoặc sửa đổi những gì bạn hiện đang làm việc
+\item Bạn có thể sử dụng lệnh git pull để tự động tìm nạp và sau đó hợp nhất nhánh từ xa (remote branch) đó vào nhánh hiện tại của bạn: {\it git pull <remote name> <branch name>}
+\item Ví dụ: 
+	
 	\includegraphics[width=0.8\linewidth]{screenshot035}
 
 	\label{fig:screenshot035}
 
-\vskip 0.4cm\vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot036}
 
 	\label{fig:screenshot036}
-\vskip 0.4cm\vskip 0.4cm
-+ Kết quả thu được là: \vskip 0.4cm
+
+\begin{itemize}
+\item Kết quả thu được là: 
 
 	\includegraphics[width=0.8\linewidth]{screenshot037}
 
 	\label{fig:screenshot037}
-\vskip 0.4cm\vskip 0.4cm
-+ Tệp README đã được kéo về từ kho lữu trữ về second remote repository\vskip 0.4cm
-{\bf e. Đẩy lên remote repo} \vskip 0.4cm
-- Khi bạn có một điểm trong dự án mà bạn muốn chia sẻ, bạn phải đẩy (pushing) bằng lệnh: {\it git push <remote name> <brach name> }\vskip 0.4cm
-- Lệnh này chỉ hoạt động nếu bạn nhân bản (clone) từ một máy chủ mà bạn có quyền truy cập ghi và không có ai đẩy trong thời gian đó\vskip 0.4cm
-- Ví dụ: Trong project second ta đã thêm một tệp text.txt và bây giờ ta cần thêm nó vào local repository và đưa nó lên kho dữ liệu\vskip 0.4cm
+
+\item Tệp README đã được kéo về từ kho lữu trữ về second remote repository
+\end{itemize}
+\end{itemize}
+
+\subsection{Đẩy lên remote repo}
+\begin{itemize}
+\item Khi bạn có một điểm trong dự án mà bạn muốn chia sẻ, bạn phải đẩy (pushing) bằng lệnh: {\it git push <remote name> <brach name> }
+\item Lệnh này chỉ hoạt động nếu bạn nhân bản (clone) từ một máy chủ mà bạn có quyền truy cập ghi và không có ai đẩy trong thời gian đó
+\item Ví dụ: Trong project second ta đã thêm một tệp text.txt và bây giờ ta cần thêm nó vào local repository và đưa nó lên kho dữ liệu
 
 	\includegraphics[width=0.8\linewidth]{screenshot038}
 
 	\label{fig:screenshot038}
-\vskip 0.4cm\vskip 0.4cm
-+ Sau khi đã commit, ta tiến hành đưa lên remote repository bằng lệnh: \textit{git push second master}
-\vskip 0.4cm
+
+\item Sau khi đã commit, ta tiến hành đưa lên remote repository bằng lệnh: \textit{git push second master}
 
 	\includegraphics[width=0.8\linewidth]{screenshot039}
 
 	\label{fig:screenshot039}
-\vskip 0.4cm\vskip 0.4cm
-{\bf f. Kiểm tra remote} \vskip 0.4cm
-- Nếu bạn muốn xem thêm thông tin về một remote cụ thể: {\it git remote show <remote name>}\vskip 0.4cm
+\end{itemize}	
 
+\subsection{Kiểm tra ,xóa và đổi tên remotes} 
+\begin{itemize}
+\item Nếu bạn muốn xem thêm thông tin về một remote cụ thể: {\it git remote show <remote name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot040}
 
-	\label{fig:screenshot040}\vskip 0.4cm\vskip 0.4cm
+	\label{fig:screenshot040}
 
-{\bf g. Xóa và đổi tên remotes} \vskip 0.4cm
-- Bạn thay đổi shortname của remote: {\it git remote rename <old remote name> <new remote name>}\vskip 0.4cm
-- Nếu muốn loại bỏ remote repo  bạn có thể sử dụng: {\it git remote rm <remote name> }
-\vskip 0.4cm
+\item Bạn thay đổi shortname của remote: {\it git remote rename <old remote name> <new remote name>}
+\item Nếu muốn loại bỏ remote repo  bạn có thể sử dụng: {\it git remote rm <remote name> }
+
 
 	\includegraphics[width=0.8\linewidth]{screenshot041}
 
 	\label{fig:screenshot041}
-\newpage
+\end{itemize}
 
 			
 \section{Làm việc với tag (thẻ) trong GIT}
-\hspace{0.6cm}{\bf a. Gắn thẻ} \vskip 0.4cm
-- Như hầu hết các VCS, Git có khả năng gắn thẻ (tag) các điểm cụ thể quan trọng trong quá trình phát triển\vskip 0.4cm
-- Thông thường người sử dụng chức năng này dùng để các release point (đánh dấu những phiên bản và sau đó chỉ cần liệt kê theo tag đã đánh dấu để tìm những phiên bản đã được đánh dấu từ trước)\vskip 0.4cm
-{\bf b. Liệt kê thẻ} \vskip 0.4cm
-- Liệt kê tất cả các thẻ của bạn: \textit{git tag}\vskip 0.4cm
-- Bạn có thể tìm kiếm các thẻ theo một yêu cầu nhất định. Ví dụ, Git source repo chứa hơn 500 tags. Nếu bạn chỉ cần xem các thẻ có đầu là v.1.8.5git tag –l “v.1.8.5*”\vskip 0.4cm
-{\bf c. Tạo thẻ} \vskip 0.4cm
-- Git sử dụng hai loại thẻ chính: lightweight và annotated\vskip 0.4cm
-- Một thẻ lightweight (thẻ nhẹ) nó chỉ trỏ đến một commit cụ thể: {\it git tag <tag name>-lw.} \vskip 0.4cm
+\begin{itemize}
+\item Như hầu hết các VCS, Git có khả năng gắn thẻ (tag) các điểm cụ thể quan trọng trong quá trình phát triển
+\item Thông thường người sử dụng chức năng này dùng để các release point (đánh dấu những phiên bản và sau đó chỉ cần liệt kê theo tag đã đánh dấu để tìm những phiên bản đã được đánh dấu từ trước)
+\end{itemize}
+\subsection{Liệt kê, tạo thẻ}
+\begin{itemize}
+\item Liệt kê thẻ
+	\begin{itemize}
+		\item Liệt kê tất cả các thẻ của bạn: \textit{git tag}
+		\item Bạn có thể tìm kiếm các thẻ theo một yêu cầu nhất định. 
+		\item Ví dụ, Git source repo chứa hơn 500 tags. Nếu bạn chỉ cần xem các thẻ có đầu là v.1.8.5git tag –l “v.1.8.5*”
+	\end{itemize}
+\item Tạo thẻ
+	\begin{itemize}
+		\item Git sử dụng hai loại thẻ chính: lightweight và annotated
+		\item Một thẻ lightweight (thẻ nhẹ) nó chỉ trỏ đến một commit cụ thể: {\it git tag <tag name>-lw.}
 	\includegraphics[width=0.8\linewidth]{screenshot042}
 
 	\label{fig:screenshot042}
-\vskip 0.4cm\vskip 0.4cm
-- Thẻ annotated (thẻ lưu trữ) được lưu trữ dưới dạng các đối tượng đầy đủ trong Git: {\it git tag –a <tag name> -m “message”}. Bạn có thể xem dữ liệu thẻ cùng với commit đã được gắn thẻ bằng cách sử dụng: {\it git show <tag name>}\vskip 0.4cm
+
+		\item Thẻ annotated (thẻ lưu trữ) được lưu trữ dưới dạng các đối tượng đầy đủ trong Git: {\it git tag –a <tag name> -m “message”}. Bạn có thể xem dữ liệu thẻ cùng với commit đã được gắn thẻ bằng cách sử dụng: {\it git show <tag name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot043}
 
-	\label{fig:screenshot043}\vskip 0.4cm\vskip 0.4cm
+	\label{fig:screenshot043}
 
-- Bạn nên thường xuyên gắn thẻ có chú thích (annotted tag) để bạn có thể có tất cả thông tin này; nhưng nếu bạn muốn một thẻ tạm thời hoặc vì một lý do nào đó không muốn giữ thông tin khác hãy sử dụng thẻ lightweight\vskip 0.4cm
-{\bf d. Tagging later} \vskip 0.4cm
-- Bạn cũng có thẻ gắn thẻ các commit sau khi bạn đã di chuyển chúng. Để gắn thẻ commit đó: \vskip 0.4cm
-+{\it git log \texttt{-{}-}pretty=oneline}: Lệnh này để xem lịch sử các commit ở dạng một dòng, dùng để lấy checksum ID của commit\vskip 0.4cm
-+ Sau đó thì thì sử dụng lệnh: {\it git tag <tag name> <checksum ID>}\vskip 0.4cm
-Ví dụ: 
-\vskip 0.4cm
+		\item Bạn nên thường xuyên gắn thẻ có chú thích (annotted tag) để bạn có thể có tất cả thông tin này; nhưng nếu bạn muốn một thẻ tạm thời hoặc vì một lý do nào đó không muốn giữ thông tin khác hãy sử dụng thẻ lightweight
+\end{itemize}
+\end{itemize}
+\subsection{Một số thao tác khác với thẻ}
+\begin{itemize}
+\item Bạn cũng có thẻ gắn thẻ các commit sau khi bạn đã di chuyển chúng. Để gắn thẻ commit đó:
+\begin{itemize}
+\item {\it git log \texttt{-{}-}pretty=oneline}: Lệnh này để xem lịch sử các commit ở dạng một dòng, dùng để lấy checksum ID của commit
+\item Sau đó thì thì sử dụng lệnh: {\it git tag <tag name> <checksum ID>}
+\item Ví dụ: 
+
 	\includegraphics[width=0.8\linewidth]{screenshot044}
 
 	\label{fig:screenshot044}
-\vskip 0.4cm\vskip 0.4cm
-{\bf e. Chia sẻ thẻ} \vskip 0.4cm
-- Lệnh \textit{git push} không thể chuyển thẻ tới máy chủ\vskip 0.4cm
-- Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh: {\it git push <remote name> <tag name>}\vskip 0.4cm
-- Nếu bạn có nhiều thẻ mà bạn muốn đẩy lên cùng một lúc: {\it git push <remote name> \texttt{-{}-}tags}\vskip 0.4cm
-- Ví dụ:\vskip 0.4cm
+\end{itemize}
+\item Chia sẻ thẻ
+\begin{itemize}
+\item Lệnh \textit{git push} không thể chuyển thẻ tới máy chủ
+\item Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh: {\it git push <remote name> <tag name>}
+\item Nếu bạn có nhiều thẻ mà bạn muốn đẩy lên cùng một lúc: {\it git push <remote name> \texttt{-{}-}tags}
+\item Ví dụ:
 
 	\includegraphics[width=0.8\linewidth]{screenshot045}
 
 	\label{fig:screenshot045}
-\vskip 0.4cm\vskip 0.4cm
-{\bf f. Checking out tags} \vskip 0.4cm
-- Bạn không thể thực sự kiểm tra thẻ trong Git, vì chúng không thể di chuyển được. Nếu bạn muốn đặt một phiên bản của kho lưu trữ trong thư mục làm việc của bạn trông giống như một thẻ cụ thể, bạn có thể tạo một chi nhánh mới tại một thẻ cụ thể với : {\it git checkout –b <branchname> <tagname>}\vskip 0.4cm
-- Ví dụ: Ta có thể tạo mới một nhánh riêng có tag v1.2\vskip 0.4cm
+\end{itemize}
+
+\item Bạn không thể thực sự kiểm tra thẻ trong Git, vì chúng không thể di chuyển được. Nếu bạn muốn đặt một phiên bản của kho lưu trữ trong thư mục làm việc của bạn trông giống như một thẻ cụ thể, bạn có thể tạo một chi nhánh mới tại một thẻ cụ thể với : {\it git checkout –b <branchname> <tagname>}
+\begin{itemize}
+ \item Ví dụ: Ta có thể tạo mới một nhánh riêng có tag v1.2
 
 	\includegraphics[width=0.8\linewidth]{screenshot046}
 
 	\label{fig:screenshot046}
-\vskip 0.4cm\vskip 0.4cm
-{\bf g. Xóa thẻ}\vskip 0.4cm
-- Xóa thẻ ở kho dữ liệu trên máy bạn (local repo): {\it  git tag –d <tag name>}\vskip 0.4cm
-- Xóa thẻ trên máy chủ lưu trữ: {\it git push <remote name> \texttt{-{}-}delete <tag name>}\vskip 0.4cm
+
+\end{itemize}
+\item Xóa thẻ
+\begin{itemize}
+\item Xóa thẻ ở kho dữ liệu trên máy bạn (local repo): {\it  git tag –d <tag name>}
+\item Xóa thẻ trên máy chủ lưu trữ: {\it git push <remote name> \texttt{-{}-}delete <tag name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot047}
 	
 	\label{fig:screenshot047}
-
-
-
-
-				
+\end{itemize}\end{itemize}
+			
 \section{Phân nhánh (branching)}
-\hspace{0.6cm}- Phân nhánh nghĩa là bạn tách khỏi dòng phát triển chính của dự án và tiếp tục làm việc mà không gây rối tới dòng chính đó (dùng để phát triển tính năng cho các phần mềm không gây ảnh hưởng)\vskip 0.4cm
-- Hiểu và nắm vững tính năng này cung cấp cho bạn một công cụ mạnh mẽ và độc đáo, hoàn toàn có thể thay đổi cách bạn phát triển các dự án\vskip 0.4cm
-- Một ủy thác (commit) và cây của nó (trees)\vskip 0.4cm
+\begin{itemize}
+\item Phân nhánh nghĩa là bạn tách khỏi dòng phát triển chính của dự án và tiếp tục làm việc mà không gây rối tới dòng chính đó (dùng để phát triển tính năng cho các phần mềm không gây ảnh hưởng)\vskip 0.4cm
+\item Hiểu và nắm vững tính năng này cung cấp cho bạn một công cụ mạnh mẽ và độc đáo, hoàn toàn có thể thay đổi cách bạn phát triển các dự án
+\end{itemize}
+\subsection{Tạo một nhánh mới}
+\begin{itemize}
+\item Tạo một nhánh mới bằng lệnh: {\it git branch <branch name>}
+\item Ví dụ: tạo một branch có tên là testing: \textit{git branch testing}. Điều này tạo ra một con trỏ mới cho cùng một commit mà bạn đang thực hiện
 
-	\includegraphics[width=0.8\linewidth]{screenshot048}
-
-	\label{fig:screenshot048}
-\vskip 0.4cm\vskip 0.4cm
-- Nếu bạn thực hiện một số thay đổi và ủy thác một lần nữa, commit tiếp theo sẽ lưu trữ một con trỏ đến commit xuất hiện ngay trước nó\vskip 0.4cm
-
-
-	\includegraphics[width=0.8\linewidth]{screenshot049}
-	
-	\label{fig:screenshot049}
-\vskip 0.4cm\vskip 0.4cm
-- Một nhánh (branch) và lịch sử commit 	
-\vskip 0.4cm
-	\includegraphics[width=0.8\linewidth]{screenshot050}
-
-	\label{fig:screenshot050}
-\vskip 0.4cm\vskip 0.4cm
-{\bf a. Tạo một nhánh mới}\vskip 0.4cm
-- Tạo một nhánh mới bằng lệnh: {\it git branch <branch name>}\vskip 0.4cm
-- Ví dụ: tạo một branch có tên là testing: \textit{git branch testing}. Điều này tạo ra một con trỏ mới cho cùng một commit mà bạn đang thực hiện
-\vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot051}
 
 	\label{fig:screenshot051}
-\vskip 0.4cm\vskip 0.4cm
-{\bf b. Con trỏ HEAD đến nhánh}\vskip 0.4cm
-- Làm thế nào để Git biết bạn hiện đang thao tác ở nhánh nào? Nó được biểu diễn bằng một con trỏ đặc biệt: HEAD\vskip 0.4cm
-- Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh: {\it git log \texttt{-{}-}oneline \texttt{-{}-}decorate}\vskip 0.4cm
+
+\end{itemize}
+\subsection{Con trỏ HEAD đến nhánh}
+\begin{itemize}
+\item Làm thế nào để Git biết bạn hiện đang thao tác ở nhánh nào? Nó được biểu diễn bằng một con trỏ đặc biệt: HEAD
+\item Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh: {\it git log \texttt{-{}-}oneline \texttt{-{}-}decorate}
 
 	\includegraphics[width=0.8\linewidth]{screenshot052}
 	
 	\label{fig:screenshot052}
-\vskip 0.4cm\vskip 0.4cm
-- Ví dụ
-\vskip 0.4cm
+
+\item Ví dụ
+
 	\includegraphics[width=0.8\linewidth]{screenshot053}
 	
 	\label{fig:screenshot053}
-\vskip 0.4cm\vskip 0.4cm
-- Chuyển nhánh để di chuyển HEAD trỏ vào nhánh được chỉ định: {\it git checkout <branch name>} \vskip 0.4cm
-- Ví dụ: \textit{git checkout testing} -> chuyển HEAD trỏ sang nhánh testing\vskip 0.4cm
+
+\item Chuyển nhánh để di chuyển HEAD trỏ vào nhánh được chỉ định: {\it git checkout <branch name>} 
+\item Ví dụ: \textit{git checkout testing} -> chuyển HEAD trỏ sang nhánh testing
 
 	\includegraphics[width=0.8\linewidth]{screenshot054}
 
 	\label{fig:screenshot054}
-\vskip 0.4cm\vskip 0.4cm
-{\bf c. Quản lý nhánh (Branches management)}\vskip 0.4cm
-- Bạn có thể nhận được một danh sách nhánh hiện tại bằng lệnh: {\it git branch}\vskip 0.4cm
+
+\end{itemize}
+\subsection{Quản lý nhánh}
+\begin{itemize}
+\item Bạn có thể nhận được một danh sách nhánh hiện tại bằng lệnh: {\it git branch}
 
 	\includegraphics[width=0.8\linewidth]{screenshot055}
 	
 	\label{fig:screenshot055}
-\vskip 0.4cm\vskip 0.4cm
-- Lưu ý ký tự * đứng trước nhánh master: nó chỉ ra nhánh mà bạn hiện đã thao tác (nhánh mà HEAD trỏ tới)\vskip 0.4cm
-- Để xem lần commit cuối cùng trên mỗi nhánh: {\it git branch –v}\vskip 0.4cm
-- Các tùy chọn \texttt{-{}-}merged và \texttt{-{}-}no-merged có thể lọc danh sách gồm các nhánh đã hoặc chưa được kết hợp (merge) vào nhánh hiện đang truy cập: {\it git branch \texttt{-{}-}merged} và{\it git branch \texttt{-{}-}no-merged}\vskip 0.4cm
+
+\item Lưu ý ký tự * đứng trước nhánh master: nó chỉ ra nhánh mà bạn hiện đã thao tác (nhánh mà HEAD trỏ tới)
+\item Để xem lần commit cuối cùng trên mỗi nhánh: {\it git branch –v}
+\item Các tùy chọn \texttt{-{}-}merged và \texttt{-{}-}no-merged có thể lọc danh sách gồm các nhánh đã hoặc chưa được kết hợp (merge) vào nhánh hiện đang truy cập: {\it git branch \texttt{-{}-}merged} và{\it git branch \texttt{-{}-}no-merged}
 
 	\includegraphics[width=0.8\linewidth]{screenshot056}
 
 	\label{fig:screenshot056}
-\vskip 0.4cm\vskip 0.4cm
-- Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh: {\it git branch –D <branch name>}\vskip 0.4cm
+
+\item Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh: {\it git branch –D <branch name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot057}
 
 	\label{fig:screenshot057}
-\vskip 0.4cm\vskip 0.4cm
-{\bf d. Phân nhánh luồng công việc}\vskip 0.4cm
-- Long-running branches (nhánh dài hạn): là các nhánh chính, đi xuyên suốt trong quá trình phát triển dự án\vskip 0.4cm
-+ Vì Git sử dụng một three-way merge đơn giản (là kết hợp 3 lần commit), việc hợp nhất từ nhánh này sang nhánh khác trong thời gian khác rất dễ thực hiện\vskip 0.4cm
-+ Điều này có nghĩa là bạn có thể có nhiều nhánh luôn mở và bạn sử dụng cho các giai đoạn khác nhau trong chu kỳ phát triển dự án; bạn có thể thường xuyên merge (kêt hợp) từ một số nhánh trong số đó thành nhánh khác
-\vskip 0.4cm
+
+\end{itemize}
+\subsection{Phân nhánh luồng công việc} 
+\begin{itemize}
+\item Long-running branches (nhánh dài hạn): là các nhánh chính, đi xuyên suốt trong quá trình phát triển dự án
+\begin{itemize}
+\item Vì Git sử dụng một three-way merge đơn giản (là kết hợp 3 lần commit), việc hợp nhất từ nhánh này sang nhánh khác trong thời gian khác rất dễ thực hiện
+\item Điều này có nghĩa là bạn có thể có nhiều nhánh luôn mở và bạn sử dụng cho các giai đoạn khác nhau trong chu kỳ phát triển dự án; bạn có thể thường xuyên merge (kêt hợp) từ một số nhánh trong số đó thành nhánh khác
+
 	\includegraphics[width=0.8\linewidth]{screenshot058}
 
 	\label{fig:screenshot058}
-\vskip 0.4cm\vskip 0.4cm
-- Topic branches (nhánh ngắn hạn): các nhánh thường được tạo ra với mục đích sửa lỗi, sau khi sửa lỗi không mà được merge với nhánh chính thì sẽ bị xóa\vskip 0.4cm
+\end{itemize}
+\item Topic branches (nhánh ngắn hạn): các nhánh thường được tạo ra với mục đích sửa lỗi, sau khi sửa lỗi không mà được merge với nhánh chính thì sẽ bị xóa
 
 						\includegraphics[width=0.8\linewidth]{screenshot059}
 					
 						\label{fig:screenshot059}
-				\vskip 0.4cm\vskip 0.4cm
-					* Quan trọng: Khi bạn đang branching (phân nhánh) và kết hợp (merging), mọi thứ chỉ được thực hiện trong kho lưu trữ Git của bạn (local repo) - không có giao tiếp với máy chủ nào đang diễn ra\vskip 0.4cm
+
+\item[$\nabla$]Quan trọng: Khi bạn đang branching (phân nhánh) và kết hợp (merging), mọi thứ chỉ được thực hiện trong kho lưu trữ Git của bạn (local repo) - không có giao tiếp với máy chủ nào đang diễn ra
+\end{itemize}				
 					
-					
-					\newpage
-\section{Hợp (merge) nhánh và xử lý xung đột (conlicts)}
-\hspace{0.6cm}- Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này thường dùng để merge branch khác vào branch master trước khi push lên remote repository, hoặc merge hai branch thành một để giải quyết chung một task.	\vskip 0.4cm
-{\bf a. Basic merging}	\vskip 0.4cm
-- Hãy tích hợp thay đổi đã thực hiện trên branch issue1 vào branch master	\vskip 0.4cm
+\section{Hợp (merge) nhánh và xử lý xung đột (conflicts)}
+
+Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này thường dùng để merge branch khác vào branch master trước khi push lên remote repository, hoặc merge hai branch thành một để giải quyết chung một task.	
+\subsection{Basic merging}
+\begin{itemize}
+ \item Hãy tích hợp thay đổi đã thực hiện trên branch issue1 vào branch master
 
 	\includegraphics[width=0.8\linewidth]{screenshot060}
 
-	\label{fig:screenshot060}	\vskip 0.4cm	\vskip 0.4cm
+	\label{fig:screenshot060}	
 
-- Merge 2 nhánh sẽ được thực hiện bằng lệnh merge: {\it git merge <branch name>.}	\vskip 0.4cm 
-- Đầu tiên, sử dụng lệnh git checkout master để chuyển con trỏ HEAD đến nhánh master	\vskip 0.4cm
+\item Merge 2 nhánh sẽ được thực hiện bằng lệnh merge: {\it git merge <branch name>.}
+\item Đầu tiên, sử dụng lệnh git checkout master để chuyển con trỏ HEAD đến nhánh master	
 
 	\includegraphics[width=0.8\linewidth]{screenshot061}
 
 	\label{fig:screenshot061}
-	\vskip 0.4cm	\vskip 0.4cm
-- Tệp được chỉnh sửa là tệp issue.txt có nội dung: {\it ''  Đây là nội dung gốc ''}	\vskip 0.4cm
-- Chỉnh sửa tệp issue.txt trong branch issue1: {\it '' Đây là nội dung chỉnh sửa ''}	\vskip 0.4cm
-- Ta thực hiện tích hợp sự thay đổi trong tệp issue.txt giữa 2 nhánh	\vskip 0.4cm
+
+\item Tệp được chỉnh sửa là tệp issue.txt có nội dung: {\it ''  Đây là nội dung gốc ''}	
+\item Chỉnh sửa tệp issue.txt trong branch issue1: {\it '' Đây là nội dung chỉnh sửa ''}
+\item Ta thực hiện tích hợp sự thay đổi trong tệp issue.txt giữa 2 nhánh
+
+	\includegraphics[width=0.8\linewidth]{screenshot01}
+
+	\label{fig:screenshot01}
 
 	\includegraphics[width=0.8\linewidth]{screenshot062}
 
 	\label{fig:screenshot062}
-	\vskip 0.4cm	\vskip 0.4cm
-- Nội dung của tệp issue.txt sau merge:	\vskip 0.4cm
-\hspace{1cm}{\it''Đây là nội dung gốc}	\vskip 0.1cm
-\hspace{1cm}{\it Đây là nội dung chỉnh sửa''}	\vskip 0.4cm
-{\bf b. Basic merge conflicts}	\vskip 0.4cm
-- Giả sử, có 2 người đang cùng sửa 1 lỗi trên tệp issue.txt tại 2 branch khác nhau là issue2 và issue3	\vskip 0.4cm
-- Bây giờ, hãy tích hợp thay đổi tại branch issue2 và thay đổi tại branch issue3 vào master.	\vskip 0.4cm
-- Trước tiên, sau khi đã checkout trên branch master, thực hiện merge branch issue2.	\vskip 0.4cm
-{\it \hspace{1cm}\$ git checkout master	\vskip 0.1cm
-\hspace{1cm}Switched to branch 'master'	\vskip 0.1cm
-\hspace{1cm}\$ git merge issue2	\vskip 0.1cm
-\hspace{1cm}Updating b2b23c4..8f7aa27	\vskip 0.1cm
-\hspace{1cm}Fast-forward	\vskip 0.1cm
-\hspace{1cm}issue.txt |    2 ++	\vskip 0.1cm
-\hspace{1cm}1 files changed, 2 insertions(+), 0 deletions(-)}	\vskip 0.4cm
 
-- Như vậy merge fast-forward (chuyển tiếp nhanh) sẽ được thực hiện.	\vskip 0.4cm
+- Nội dung của tệp issue.txt sau merge:	
+
+\includegraphics[width=0.8\linewidth]{screenshot02}
+
+	\label{fig:screenshot02}
+
+\end{itemize}
+
+\subsection{Basic merge conflicts}
+\begin{itemize}
+\item Giả sử, có 2 người đang cùng sửa 1 lỗi trên tệp issue.txt tại 2 branch khác nhau là issue2 và issue3	
+\item Bây giờ, hãy tích hợp thay đổi tại branch issue2 và thay đổi tại branch issue3 vào master.
+\item Trước tiên, sau khi đã checkout trên branch master, thực hiện merge branch issue2.	
+
+	\includegraphics[width=0.8\linewidth]{screenshot03}
+
+	\label{fig:screenshot03}
+	
+\item Như vậy merge fast-forward (chuyển tiếp nhanh) sẽ được thực hiện.	
 
 	\includegraphics[width=0.8\linewidth]{screenshot063}
 
 	\label{fig:screenshot063}
-	\vskip 0.4cm	\vskip 0.4cm
-- Tiếp theo, thực hiện merge branch issue3.	\vskip 0.4cm
-{\it \hspace{1cm}\$ git merge issue3	\vskip 0.1cm
-\hspace{1cm}Auto-merging issue.txt	\vskip 0.1cm
-\hspace{1cm}CONFLICT (content): Merge conflict in issue.txt	\vskip 0.1cm
-\hspace{1cm}Automatic merge failed; fix conflicts and then commit the result.}	\vskip 0.4cm
+	
+\item Tiếp theo, thực hiện merge branch issue3	
 
-- Tự động merge đã thất bại. Có vẻ như đã phát sinh xung đột do đã thay đổi cùng một dòng với nội dung khác. Nội dung của issue.txt lúc này thì sẽ giống như bên dưới.	\vskip 0.4cm
-{\it \hspace{1cm}Đây là nội dung gốc	\vskip 0.1cm
-\hspace{1cm}Đây là nội dung chỉnh sửa	\vskip 0.1cm
-\hspace{1cm}<<<<<<< HEAD	\vskip 0.1cm
-\hspace{1cm}commit: Đây là nội dung chỉnh sửa issue2	\vskip 0.1cm
-\hspace{1cm}=======	\vskip 0.1cm
-\hspace{1cm}pull: Đây là nội dung chỉnh sửa issue3	\vskip 0.1cm
-\hspace{1cm}>>>>>>> issue3}	\vskip 0.4cm
-- Ở những chổ có xung đột thì Git đang chèn vào phần khác biệt. Hãy sửa như bên dưới.	\vskip 0.4cm
-{\it \hspace{1cm}Đây là nội dung gốc	\vskip 0.1cm
-\hspace{1cm}Đây là nội dung chỉnh sửa	\vskip 0.1cm
-\hspace{1cm}commit: Đây là nội dung chỉnh sửa issue2	\vskip 0.1cm
-\hspace{1cm}pull: Đây là nội dung chỉnh sửa issue3}	\vskip 0.4cm
-- Vì đã chỉnh sửa nơi xung đột nên hãy commit lại.	\vskip 0.4cm
-{\it \hspace{1cm}\$ git add issue.txt	\vskip 0.1cm
-\hspace{1cm}\$ git commit -m "Thực hiện merge branch issue3"	\vskip 0.1cm \hspace{1cm}
-\hspace{1cm}\# On branch master	\vskip 0.1cm
-\hspace{1cm}nothing to commit (working directory clean)}	\vskip 0.4cm
-- Lịch sử sẽ giống thế này. Vì đã chỉnh sửa nơi xung đột trong merge lần này, nên merge commit sẽ ghi lại thay đổi đó sẽ được tạo mới. Và, đầu của master sẽ di chuyển đến đó. Loại merge thế này là không phải fast-forward mà được gọi là non fast-forward merge.
-	\vskip 0.4cm
+	\includegraphics[width=0.8\linewidth]{screenshot04}
+
+	\label{fig:screenshot04}
+
+\item Tự động merge đã thất bại. Có vẻ như đã phát sinh xung đột do đã thay đổi cùng một dòng với nội dung khác. Nội dung của issue.txt lúc này thì sẽ giống như bên dưới.
+
+	\includegraphics[width=0.8\linewidth]{screenshot05}
+
+	\label{fig:screenshot05}	
+
+\item Ở những chổ có xung đột thì Git đang chèn vào phần khác biệt. Hãy sửa như bên dưới.	
+
+	\includegraphics[width=0.8\linewidth]{screenshot06}
+
+	\label{fig:screenshot06}	
+
+\item Vì đã chỉnh sửa nơi xung đột nên hãy commit lại.
+\item Lịch sử sẽ giống thế này. Vì đã chỉnh sửa nơi xung đột trong merge lần này, nên merge commit sẽ ghi lại thay đổi đó sẽ được tạo mới. Và, đầu của master sẽ di chuyển đến đó. Loại merge thế này là không phải fast-forward mà được gọi là non fast-forward merge.
+
 	\includegraphics[width=0.8\linewidth]{screenshot064}
 
 	\label{fig:screenshot064}
+\end{itemize}
 
-	\vskip 0.4cm	\vskip 0.4cm
-			\newpage			
 \section{Remote branches}
-\hspace{0.6cm}- Tại đường dẫn {\it /q/BT/example/remote} tạo một remote repo trên máy local bằng lệnh {\it git init \texttt{-{}-}bare} \vskip 0.4cm
-- Ta có một local repo tên local với snapshot như hình\vskip 0.4cm
+\subsection{Thiết lập ví dụ}
+\begin{itemize}
+\item Tại đường dẫn {\it /q/BT/example/remote} tạo một remote repo trên máy local bằng lệnh {\it git init \texttt{-{}-}bare}
+\item Ta có một local repo tên local với snapshot như hình
 
 	\includegraphics[width=0.8\linewidth]{screenshot065}
 	
-	\label{fig:screenshot065}\vskip 0.4cm\vskip 0.4cm
+	\label{fig:screenshot065}
 
-- Tiến hành thiết lập remote cho nó bằng lệnh: {\it git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là {\it /q/BT/example/remote}\vskip 0.4cm
+\item Tiến hành thiết lập remote cho nó bằng lệnh: {\it git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là {\it /q/BT/example/remote}
 
 	\includegraphics[width=0.8\linewidth]{screenshot066}
 
 	\label{fig:screenshot066}
-\vskip 0.4cm\vskip 0.4cm
-- Tiến hành push tất cả dữ liệu từ repo local lên remote repo: {\it git push \texttt{-{}-}all origin}
-\vskip 0.4cm
-{\it  \hspace{1cm}\$ git remote add origin /q/BT/example/remote\vskip 0.1cm
- \hspace{1cm}To Q:/BT/example/remote\vskip 0.1cm
- \hspace{1cm}* [new branch]      alpha -> alpha\vskip 0.1cm
- \hspace{1cm}* [new branch]      master -> master}\vskip 0.4cm
+	
+\item Tiến hành push tất cả dữ liệu từ repo local lên remote repo: {\it git push \texttt{-{}-}all origin}
 
- - Clone (nhân bản) từ remote repo: {\it git clone <address remote repo> <address clone>}\vskip 0.4cm
- 
- {\it \hspace{1cm} \$ git clone /q/BT/example/remote /q/BT/example/clone\vskip 0.1cm
- \hspace{1cm} Cloning into 'Q:/BT/example/clone'...\vskip 0.1cm
- \hspace{1cm} done.}\vskip 0.4cm
- 
- - Các ví dụ sẽ được lấy từ repo clone\vskip 0.4cm
- - Trong một Local Repo, nếu Remote đặt tên là remotename, và một nhánh tên là branchname thì để biểu thị nhánh này trên Remote sẽ ký hiệu là remotename/branchename. Trạng thái sau khi nhân bản (clone)\vskip 0.4cm
- {\bf a. Trạng thái của của remote và clone}\vskip 0.4cm
- - Kiểm tra trạng thái của repo clone\vskip 0.4cm
+	
+	\includegraphics[width=0.8\linewidth]{screenshot07}
+
+	\label{fig:screenshot07}
+
+\item Clone (nhân bản) từ remote repo: {\it git clone <address remote repo> <address clone>}
+\item Các ví dụ sẽ được lấy từ repo clone
+\item Trong một Local Repo, nếu Remote đặt tên là remotename, và một nhánh tên là branchname thì để biểu thị nhánh này trên Remote sẽ ký hiệu là remotename/branchename. Trạng thái sau khi nhân bản (clone)
+\end{itemize}
+\subsection{Trạng thái của của remote và clone}
+\begin{itemize}
+\item Kiểm tra trạng thái của repo clone
 
  	\includegraphics[width=0.8\linewidth]{screenshot067}
  
  	\label{fig:screenshot067}
-\vskip 0.4cm\vskip 0.4cm
- - Trạng thái của remote:\vskip 0.4cm
+
+\item Trạng thái của remote:
 
  	\includegraphics[width=0.8\linewidth]{screenshot068}
 
  	\label{fig:screenshot068}
-\vskip 0.4cm\vskip 0.4cm
- - Nhánh master của cả 2 đều đang ở snapshot C2\vskip 0.4cm
-{\bf b. Sự phân nhánh tại Local khi Remote cập nhật:}\vskip 0.4cm
- - Giả sử ở repo local, có thêm 2 commit mới là snapshot C3, C4, sau đó cập nhật nhánh master lên remote: {\it git push origin master}\vskip 0.4cm
+
+\item Nhánh master của cả 2 đều đang ở snapshot C2
+\end{itemize}
+\subsection{Sự phân nhánh tại Local khi Remote cập nhật} 
+\begin{itemize}
+\item Giả sử ở repo local, có thêm 2 commit mới là snapshot C3, C4, sau đó cập nhật nhánh master lên remote: {\it git push origin master}
 
 
  	\includegraphics[width=0.8\linewidth]{screenshot069}
 
  	\label{fig:screenshot069}
-\vskip 0.4cm\vskip 0.4cm
+
  	\includegraphics[width=0.8\linewidth]{screenshot070}
  
- 	\label{fig:screenshot070}\vskip 0.4cm\vskip 0.4cm
-
- - Quay lại với repo clone, ta cũng tạo 2 commit C5, C6 nhưng không đẩy lên remote: ta thấy nhánh master \vskip 0.4cm
+ 	\label{fig:screenshot070}
+\item Quay lại với repo clone, ta cũng tạo 2 commit C5, C6 nhưng không đẩy lên remote: ta thấy nhánh master 
  
  	\includegraphics[width=0.8\linewidth]{screenshot071}
  
  	\label{fig:screenshot071}
- \vskip 0.4cm\vskip 0.4cm
+ 
  	\includegraphics[width=0.8\linewidth]{screenshot072}
  
  	\label{fig:screenshot072}
-\vskip 0.4cm\vskip 0.4cm
- - Tiếp theo, sử dụng lệnh {\it git fetch \texttt{-{}-}all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái\vskip 0.4cm
+
+\item Tiếp theo, sử dụng lệnh {\it git fetch \texttt{-{}-}all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái
 
  	\includegraphics[width=0.8\linewidth]{screenshot073}
  
- 	\label{fig:screenshot073}\vskip 0.4cm\vskip 0.4cm
+ 	\label{fig:screenshot073}
 
- - Nó cho biết nhánh master và origin/master tại repo colne bị phân nhánh. Có thể chuyển xem log của origin/master
-\vskip 0.4cm
+\item Nó cho biết nhánh master và origin/master tại repo colne bị phân nhánh. Có thể chuyển xem log của origin/master
+
  	\includegraphics[width=0.8\linewidth]{screenshot074}
  
  	\label{fig:screenshot074}
- \vskip 0.4cm\vskip 0.4cm
- - Qua đó dựng được tình trạng master và origin/master bị phân ly ở repo clone như sau:\vskip 0.4cm
+
+\item Qua đó dựng được tình trạng master và origin/master bị phân ly ở repo clone như sau:
 
  	\includegraphics[width=0.8\linewidth]{screenshot075}
  
  	\label{fig:screenshot075}
- \vskip 0.4cm\vskip 0.4cm
-{\bf c. Pull – Hợp nhánh bị phân ly}\vskip 0.4cm
- - Để hợp nhánh phân ly trên dùng lệnh merge để hợp nhánh origin/master vào master sau khi fetch dữ liệu về\vskip 0.4cm
- - Quá trình trên có thể tự động luôn cả 2 (tức là fetch xong, merge luôn) bằng lệnh git pull origin master\vskip 0.4cm
- -  Sau khi pull kiểm tra log:\vskip 0.4cm
+\end{itemize}
+\subsection{Pull – Hợp nhánh bị phân ly}
+\begin{itemize}
+\item Để hợp nhánh phân ly trên dùng lệnh merge để hợp nhánh origin/master vào master sau khi fetch dữ liệu về
+\item Quá trình trên có thể tự động luôn cả 2 (tức là fetch xong, merge luôn) bằng lệnh git pull origin master
+\item  Sau khi pull kiểm tra log:
  
  \includegraphics[width=0.8\linewidth]{screenshot076}
  	\label{fig:screenshot076}
-\vskip 0.4cm\vskip 0.4cm
+
  	\includegraphics[width=0.8\linewidth]{screenshot077}
 
  	\label{fig:screenshot077}
-\vskip 0.4cm\vskip 0.4cm
- - Xóa nhánh tại remote
- \vskip 0.4cm
- {\it \hspace{1cm} \$ git push remotename \texttt{-{}-}delete branchname}\vskip 0.4cm
- 
- - Đổi tên nhánh local và remote\vskip 0.4cm
- 
- {\it \hspace{1cm}git branch -m old\_branch new\_branch         \hspace{1cm} \# Đổi tên ở Local\vskip 0.1cm
-  \hspace{1cm}git push origin :old\_branch                  \hspace{1cm}\# Xóa nhánh ở Remote\vskip 0.1cm
-  \hspace{1cm}git push \texttt{-{}-}set-upstream origin new\_branch   \# Cập nhật nhánh có tên mới lên  Remote\vskip 0.4cm }
 
- - Cập nhật nhánh mới từ remote vào local\vskip 0.4cm
+\item Xóa nhánh tại remote: {\it \hspace{1cm} \$ git push remotename \texttt{-{}-}delete branchname}
  
- {\it \hspace{1cm}git pull origin                                    \hspace{1cm}\# Cập nhật thông tin từ Remote\vskip 0.1cm
-  \hspace{1cm}git branch -r                                      \hspace{1cm}\# Liệt kê các nhánh ở Remote\vskip 0.1cm
-  \hspace{1cm}git checkout -b branchname  origin/branchname      \hspace{1cm}\# Tao nhánh mới ở Local theo Remote\vskip 0.4cm}
- 
-							
-\section{Rebasing}
-\hspace{0.6cm}- Khái niệm: Lệnh này sẽ merge hai branch lại với nhau và nó sẽ chọn commit mới nhất (snapshot mới nhất) để thực hiện. Nhưng với rebase thì cơ chế hoạt động có chút khác biệt, nó sẽ so sánh và lưu những thay đổi giữa hai nhánh vào một file tạm, sau đó thực hiện fast-forward merge
+\item Đổi tên nhánh local và remote
+\begin{itemize}
+	\item Đổi tên ở Local: {\it git branch -m old\_branch new\_branch}
+  	\item Xóa nhánh ở Remote: {\it git push origin :old\_branch}
+  	\item Cập nhật nhánh có tên mới lên  Remote: {\it git push \texttt{-{}-}set-upstream origin new\_branch}
+\end{itemize}
+\item Cập nhật nhánh mới từ remote vào local
+ 	\begin{itemize}
+ 	\item Cập nhật thông tin từ Remote: {\it git pull origin}
+	\item Liệt kê các nhánh ở Remote: {\it git branch -r}
+  	\item Tạo nhánh mới ở Local theo Remote: {\it git checkout -b branchname  origin/branchname}
+ \end{itemize}\end{itemize}
+
 \newpage
 
 \chapter{Tổng kết} % Chương 3
-\hspace{0.6cm} Trên đây  là toàn bộ kiến thức mà nhóm đã học được trong thời gian tìm hiểu về GIT, qua đó nhóm đã thấy được nhưng lợi ích của GIT trong quá trình học tập và làm việc, đặc biệt là trong quá trình làm việc nhóm hay giải quyết những dự án lớn:\vskip 0.4cm
--Sắp xếp công việc tốt hơn\vskip 0.4cm
--Linh hoạt hơn khi cùng phải làm cùng lúc nhiều task\vskip 0.4cm
--Tự tin hơn khi thử nghiệm những ý tưởng mới \vskip 0.4cm
--GitHub Community Forum là nơi để lập trình viên trao đổi, hỗ trợ và học hỏi với hơn 439000 developers và 1 triệu 350 ngàn repositories, đây chính là nơi hỗ trợ cho những bạn mới bắt đầu với git.\vskip 0.4cm
-...\vskip 0.4cm
+
+Trên đây  là toàn bộ kiến thức mà nhóm đã học được trong thời gian tìm hiểu về GIT, qua đó nhóm đã thấy được nhưng lợi ích của GIT trong quá trình học tập và làm việc, đặc biệt là trong quá trình làm việc nhóm hay giải quyết những dự án lớn:
+\begin{itemize}
+\item Sắp xếp công việc tốt hơn
+\item Linh hoạt hơn khi cùng phải làm cùng lúc nhiều task
+\item Tự tin hơn khi thử nghiệm những ý tưởng mới
+\item GitHub Community Forum là nơi để lập trình viên trao đổi, hỗ trợ và học hỏi với hơn 439000 developers và 1 triệu 350 ngàn repositories, đây chính là nơi hỗ trợ cho những bạn mới bắt đầu với git.
+\end{itemize}
 
 \begin{thebibliography}{99} % Tài liệu tham khảo
 
 %\addcontentsline{toc}{chapter}{{\bf Tài liệu tham khảo}\rm}
 
-\bibitem{Eva} Sách {\it Pro Git} của tác giả Scott Chacon và Ben Straub
+\bibitem{Eva} Sách {\it Pro Git 2nd Edition} của tác giả Scott Chacon và Ben Straub
 
 \bibitem{BaI} Các nguồn tài liệu trên mạng và youtube.
 

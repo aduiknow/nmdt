@@ -91,26 +91,30 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 
 \chapter{Lời nói đầu}
 {\bf Đặt vấn đề}\vskip 0.4cm
-+ Vấn đề khi làm việc cá nhân: bạn đang làm việc với một số tập tin và thư mục nào đó (gọi đơn giản là file). Hàng ngày, bạn tiến hành nhiều thay đổi trên các file này. Vào một ngày xấu trời nào đó, bạn cần quay lại thời điểm của những file này cách đây 2 ngày thì bạn phải làm sao?\vskip 0.4cm
+\begin{itemize}
+\item Vấn đề khi làm việc cá nhân: bạn đang làm việc với một số tập tin và thư mục nào đó (gọi đơn giản là file). Hàng ngày, bạn tiến hành nhiều thay đổi trên các file này. Vào một ngày xấu trời nào đó, bạn cần quay lại thời điểm của những file này cách đây 2 ngày thì bạn phải làm sao?\\
 
-+ Vấn đề khi làm việc nhóm: bạn và vài người bạn của bạn đang làm việc trên một số file (hay project), làm sao để nhiều người làm việc hiệu quả trên các file này (không có những trường hợp ghi đè nội dung của nhau, xóa nhầm file, quản lý được ai thao tác trên các file nào... )\vskip 0.4cm
+\item Vấn đề khi làm việc nhóm: bạn và vài người bạn của bạn đang làm việc trên một số file (hay project), làm sao để nhiều người làm việc hiệu quả trên các file này (không có những trường hợp ghi đè nội dung của nhau, xóa nhầm file, quản lý được ai thao tác trên các file nào... )\\
 
-Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên nhiều nguồn tài liệu và biết đến công cụ quản lí mã nguồn có thể giải quyết được các vấn đề trên và hơn thế nữa. Sau khi có được chủ đề bài tập lớn, nhóm đã cùng nhau tìm hiểu về Git - một công cụ quản lý mã nguồn rất phổ biến. Sau thời gian học tập và tìm kiếm tài liệu trên mạng, thông qua quá trình thực hành nhóm đã có những kiến thức cơ bản nhất. Và dưới đây chính là những kiến thức mà nhóm đã tìm hiểu được về Git.
-
+\item[$\nabla$] Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên nhiều nguồn tài liệu và biết đến công cụ quản lí mã nguồn có thể giải quyết được các vấn đề trên và hơn thế nữa. Sau khi có được chủ đề bài tập lớn, nhóm đã cùng nhau tìm hiểu về Git - một công cụ quản lý mã nguồn rất phổ biến. Sau thời gian học tập và tìm kiếm tài liệu trên mạng, thông qua quá trình thực hành nhóm đã có những kiến thức cơ bản nhất. Và dưới đây chính là những kiến thức mà nhóm đã tìm hiểu được về Git.
+\end{itemize}
 
 \tableofcontents % Lệnh mục lục
 
 \chapter{Giới thiệu VCS} % Chương 1
 
 %\addcontentsline{toc}{chapter}{{\bf Giới thiệu VCS}\rm} 
-
-\hspace{0.6cm} •	Hệ thống quản lý phiên bản (VCS) là một hệ thống ghi lại những thay đổi trên một tệp hay tập hợp các tệp theo thời gian để mà chúng ta có thể khôi phục lại các phiên bản trước.
-\vskip 0.4cm
-•	VCS cho phép chúng ta \\
-- Khôi phục lại phiên bản cũ của tệp hay cả dự án\\
-- Xem lại các thay đổi được thực hiện theo thời gian\\
-- Quan sát xem ai người gây ra vấn đề và còn nhiều thứ khác\vskip 0.4cm
-•	Có 3 loại quản lý phiên bản: Hệ thống quản lý phiên bản cục bộ (Local Version Control Systems), tập trung (Centralized Version Control Systems) và phân tán (Distributed Version Control Systems). Dưới đây chúng ta tập trung vào hệ thống quản lý phiên bản phân tán (DVSC), cụ thể là Git.\\
+\hspace{0.6cm}
+\begin{itemize}
+\item Hệ thống quản lý phiên bản (VCS) là một hệ thống ghi lại những thay đổi trên một tệp hay tập hợp các tệp theo thời gian để mà chúng ta có thể khôi phục lại các phiên bản trước.
+\item VCS cho phép chúng ta:
+	\begin{itemize}
+		\item Khôi phục lại phiên bản cũ của tệp hay cả dự án
+		\item Xem lại các thay đổi được thực hiện theo thời gian
+		\item Quan sát xem ai người gây ra vấn đề và còn nhiều thứ khác
+	\end{itemize}
+\item Có 3 loại quản lý phiên bản: Hệ thống quản lý phiên bản cục bộ (Local Version Control Systems), tập trung (Centralized Version Control Systems) và phân tán (Distributed Version Control Systems). Dưới đây chúng ta tập trung vào hệ thống quản lý phiên bản phân tán (DVSC), cụ thể là Git.
+\end{itemize}
 
 \chapter{Giới thiệu GIT}
 
@@ -120,41 +124,51 @@ Từ hai vấn đề trên các thành viên trong nhóm đã tìm hiểu trên 
 
 %\addcontentsline{toc}{chapter}{{\bf Lịch sử}\rm} 
 
-\hspace{0.6cm}- Năm 2002, dự án Linux kernel bắt đầu sử dụng một hệ thống quản lý phiên bản phân tán (DVSC) có bản quyền là BitKeeper. \vskip 0.4cm
-- Năm 2005, mối quan hệ giữa cộng đồng phát triển Linux kernel và công ty thương mại đã phát triển BitKeeper đổ vỡ.  \vskip 0.4cm
-- Điều đó thúc đẩy cộng đồng phát triển Linux tạo ra một công cụ của riêng họ, dựa trên những điều học được khi sử dụng BitKeeper. \vskip 0.4cm
-
+\hspace{0.6cm}
+\begin{itemize}
+\item Năm 2002, dự án Linux kernel bắt đầu sử dụng một hệ thống quản lý phiên bản phân tán (DVSC) có bản quyền là BitKeeper.
+\item Năm 2005, mối quan hệ giữa cộng đồng phát triển Linux kernel và công ty thương mại đã phát triển BitKeeper đổ vỡ.
+\item Điều đó thúc đẩy cộng đồng phát triển Linux tạo ra một công cụ của riêng họ, dựa trên những điều học được khi sử dụng BitKeeper.
+\end{itemize}
 \section{Tổng quan về Git}
 
 %\addcontentsline{toc}{chapter}{{\bf Lời nói đầu}\rm} 
-
-\hspace{0.6cm}•	Cách xử lý dữ liệu:\vskip 0.4cm
-- Git coi dữ liệu của nó là một tập các ảnh (snapshot) của hệ thống tập tin. Điều này có nghĩa là mỗi phiên bản của dự án (có thể hiểu là một commit) sẽ là tập hợp của một số ảnh lưu (snapshots) lại nội dung của các tập tin của phiên bản đó.\vskip 0.4cm
-- Điều này mang đến nhiều tiện lợi cho việc theo dõi lịch sử, phục hồi dữ liệu. \vskip 0.4cm
-•	Thao tác với dữ liệu:\vskip 0.4cm
-- Hầu hết các thao tác với dữ liệu của Git có thể thực hiện cục bộ. Git thực hiện được việc này vì toàn bộ dữ liệu của dự án đều được lấy về và lưu trữ trên máy tính của người dùng.\vskip 0.4cm
-- Với tính năng này của Git, người dùng có thể làm việc trong nhiều trường hợp mà không nhất thiết phải có kết nối Internet. Điều này mang đến nhiều lợi thế cho Git so với các hệ thống quản lý dữ liệu khác.\vskip 0.4cm
-•	Tính toàn vẹn:\vskip 0.4cm
-- Các thay đổi trong Git được tham chiếu bằng một mã băm sử dụng cơ chế mã hóa SHA-1. Đồng thời, các thay đổi trong Git đều được thêm vào cơ sở dữ liệu do đó rất khó bị mất khi thay đổi và truyền tải dữ liệu. Với Git, người dùng có thể thoải mái thử nghiệm, lưu trữ mà không sợ ảnh hưởng đến dự án.\vskip 0.4cm
-
-Tổ chức dữ liệu trong Git: các tập tin trong Git tồn tại ở một trong ba trạng thái là modified, staged và committed.\vskip 0.4cm
-•	{\it Modified}: tập tin được sửa nhưng chưa được đánh dấu để commit (nằm trong mục Unstaged files).\vskip 0.4cm
-•{\it	Staged}: tập tin được đánh dấu sẽ được commit (nằm trong mục Staged files).\vskip 0.4cm
-•{\it	Committed}: tập tin đã được commit và lưu trữ trong cơ sở dữ liệu.\vskip 0.4cm
-(Một tập tin có thể vừa ở trạng thái modified vừa ở trạng thái staged hoặc committed. Điều này xảy ra khi người dùng chỉ staged một số dòng trong tập tin.)\vskip 0.4cm
-Ba trạng thái này tạo ra ba phần riêng biệt của dự án:\vskip 0.4cm
-•{\it	Working directory}: là bản sao của một phiên bản của dự án. Người dùng sẽ làm việc với các tập tin ở khu vực này. Mọi thay đổi của các tập tin sẽ được hiển thị ở đây.\vskip 0.4cm
-•	{\it Staging area}: là một tập tin trong thư mục Git. Tập tin này chứa thông tin về những thay đổi sẽ được commit.\vskip 0.4cm
-•{\it	Git directory}: đây là nơi Git lưu trữ các siêu dữ liệu (metadata) và cơ sở dữ liệu của toàn bộ dự án. Đây cũng là phần quan trọng nhất của Git, nó là một bản sao của dự án được sao chép (clone) từ repository trên server Git.\vskip 0.4cm
-
+\begin{itemize}
+\item Cách xử lý dữ liệu:
+	\begin{itemize}
+		\item Git coi dữ liệu của nó là một tập các ảnh (snapshot) của hệ thống tập tin. Điều này có nghĩa là mỗi phiên bản của dự án (có thể hiểu là một commit) sẽ là tập hợp của một số ảnh lưu (snapshots) lại nội dung của các tập tin của phiên bản đó.
+		\item Điều này mang đến nhiều tiện lợi cho việc theo dõi lịch sử, phục hồi dữ liệu.
+	\end{itemize}
+\item Thao tác với dữ liệu:
+	\begin{itemize}
+		\item Hầu hết các thao tác với dữ liệu của Git có thể thực hiện cục bộ. Git thực hiện được việc này vì toàn bộ dữ liệu của dự án đều được lấy về và lưu trữ trên máy tính của người dùng.
+		\item Với tính năng này của Git, người dùng có thể làm việc trong nhiều trường hợp mà không nhất thiết phải có kết nối Internet. Điều này mang đến nhiều lợi thế cho Git so với các hệ thống quản lý dữ liệu khác.
+		\end{itemize}
+\item Tính toàn vẹn: Các thay đổi trong Git được tham chiếu bằng một mã băm sử dụng cơ chế mã hóa SHA-1. Đồng thời, các thay đổi trong Git đều được thêm vào cơ sở dữ liệu do đó rất khó bị mất khi thay đổi và truyền tải dữ liệu. Với Git, người dùng có thể thoải mái thử nghiệm, lưu trữ mà không sợ ảnh hưởng đến dự án.
+\item Tổ chức dữ liệu trong Git: các tập tin trong Git tồn tại ở một trong ba trạng thái là modified, staged và committed.
+	\begin{itemize}
+		\item {\it Modified}: tập tin được sửa nhưng chưa được đánh dấu để commit (nằm trong mục Unstaged files).
+		\item {\it	Staged}: tập tin được đánh dấu sẽ được commit (nằm trong mục Staged files).
+		\item {\it Committed}: tập tin đã được commit và lưu trữ trong cơ sở dữ liệu.
+		\item[$\nabla$] Một tập tin có thể vừa ở trạng thái modified vừa ở trạng thái staged hoặc committed. Điều này xảy ra khi người dùng chỉ staged một số dòng trong tập tin.
+	\end{itemize}
+\item Ba trạng thái này tạo ra ba phần riêng biệt của dự án:
+	\begin{itemize}
+		\item {\it Working directory}: là bản sao của một phiên bản của dự án. Người dùng sẽ làm việc với các tập tin ở khu vực này. Mọi thay đổi của các tập tin sẽ được hiển thị ở đây.
+		\item {\it Staging area}: là một tập tin trong thư mục Git. Tập tin này chứa thông tin về những thay đổi sẽ được commit.
+		\item {\it Git directory}: đây là nơi Git lưu trữ các siêu dữ liệu (metadata) và cơ sở dữ liệu của toàn bộ dự án. Đây cũng là phần quan trọng nhất của Git, nó là một bản sao của dự án được sao chép (clone) từ repository trên server Git.
+		\end{itemize}
+\end{itemize}
 \newpage
 \section{Download và cài đặt}
 
 %\addcontentsline{toc}{chapter}{{\bf Download và cài đặt}\rm} 
 
-\hspace{0.6cm}- Link download: {\it https://git-scm.com/downloads \vskip 0.4cm}
-- Git hỗ trợ các nền tảng Windows, MacOS, Linux/UNIX\vskip 0.4cm
-- Hiện tại là phiên bản 2.19.2\vskip 0.4cm
+\begin{itemize}
+\item Link download: {\it https://git-scm.com/downloads }
+\item Git hỗ trợ các nền tảng Windows, MacOS, Linux/UNIX
+\item Hiện tại là phiên bản 2.19.2
+\end{itemize}
 
 
 \newpage % Mấy lệnh \newpage và abc, xyz này khi gõ thì các bạn bỏ đi nhé!
@@ -167,14 +181,19 @@ Ba trạng thái này tạo ra ba phần riêng biệt của dự án:\vskip 0.4
 
 
 \section{Thiết lập ban đầu} 
-\hspace{0.6cm}{\bf a. Git folder structure ( Cấu trúc thư mục Git)}\vskip 0.4cm
-- Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta xem và điều chỉnh các biến cấu hình để điều khiển được mọi khía cạnh của Git \vskip 0.4cm
-{\bf b. Danh tính của người dùng}\vskip 0.4cm
-- Điều đầu tiên bạn nên làm sau khi cài đặt Git đó là đặt tên người dùng và địa chỉ email của bạn.\vskip 0.4cm
-- Điều này quan trọng bởi vì mỗi commit trong Git đều sử dụng thông tin này, những thông tin này sẽ mãi gắn với các commit.\vskip 0.4cm
-- Hai thông tin này phải được cái đặt trước khi thực hiện mọi thao tác trên Git vì khi bạn ủy thác thông tin lên Git thì Git sẽ phân biệt và nhận dạng thông qua username và useremail\vskip 0.4cm
-+ Để đặt tên người dùng, ta dùng lệnh: {\it  git config \texttt{-{}-}global user.name “Your name”} \vskip 0.4cm
-+ Để đặt email: {\it git config \texttt{-{}-}global user.email john@example.com}\vskip 0.4cm
+\subsection{Cấu trúc thư mục Git}  
+
+Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta xem và điều chỉnh các biến cấu hình để điều khiển được mọi khía cạnh của Git 
+\subsection{Danh tính của người dùng}
+\begin{itemize}
+\item Điều đầu tiên bạn nên làm sau khi cài đặt Git đó là đặt tên người dùng và địa chỉ email của bạn.
+\item Điều này quan trọng bởi vì mỗi commit trong Git đều sử dụng thông tin này, những thông tin này sẽ mãi gắn với các commit.
+\item Hai thông tin này phải được cái đặt trước khi thực hiện mọi thao tác trên Git vì khi bạn ủy thác thông tin lên Git thì Git sẽ phân biệt và nhận dạng thông qua username và useremail.
+	\begin{itemize}
+		\item Để đặt tên người dùng, ta dùng lệnh: {\it  git config \texttt{-{}-}global user.name “Your name”}
+		\item Để đặt email: {\it git config \texttt{-{}-}global user.email john@example.com}
+	\end{itemize}
+\end{itemize}
 %\begin{figure}
 	%\centering
 	\includegraphics[width=0.8\linewidth]{screenshot001}
@@ -183,277 +202,304 @@ Ba trạng thái này tạo ra ba phần riêng biệt của dự án:\vskip 0.4
 %\end{figure}
 \vskip 0.4cm
 \vskip 0.4cm
-{\bf c. Trình soạn thảo}\vskip 0.4cm
-- Ở bước cài đặt Git, chúng ta đã chọn Visual Studio Code làm công cụ chỉnh sửa mặc định\vskip 0.4cm
-- Nếu muốn thay đổi công cụ mặc định đã được cài đặt trước đó thì có thể sử dụng lệnh:\vskip 0.4cm
-{\it git config \texttt{-{}-}global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}\vskip 0.4cm
-Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc định cho Git\vskip 0.4cm
+\subsection{Trình soạn thảo}
+\begin{itemize}
+\item Ở bước cài đặt Git, chúng ta đã chọn Visual Studio Code làm công cụ chỉnh sửa mặc định.
+\item Nếu muốn thay đổi công cụ mặc định đã được cài đặt trước đó thì có thể sử dụng lệnh:
+{\it git config \texttt{-{}-}global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}
+\item Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc định cho Git
+\end{itemize}
+\vskip 0.4cm
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot002}
 	%\caption{}
 	\label{fig:screenshot002}
 \vskip 0.4cm \vskip 0.4cm
-{\bf d. Kiểm tra các cài đặt} \vskip 0.4cm
-- Khi muốn kiểm tra các cài đặt, ta dùng lệnh git config \texttt{-{}-}list. Kết quả như hình bên dưới: 
+\subsection{Kiểm tra các cài đặt}
+\begin{itemize}
+\item Khi muốn kiểm tra các cài đặt, ta dùng lệnh git config \texttt{-{}-}list. Kết quả như hình bên dưới: 
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot003}
 	\label{fig:screenshot003}\vskip 0.4cm\vskip 0.4cm
 
-- Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh: {\it git config \{khoá\}}\vskip 0.4cm
-- Ví dụ như ta muốn xem tên người dùng và địa chỉ email, ta gõ lệnh như trong hình: \vskip 0.4cm
+\item Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh: {\it git config \{khoá\}}
+\item Ví dụ như ta muốn xem tên người dùng và địa chỉ email, ta gõ lệnh như trong hình: 
+\end{itemize}
+\vskip 0.4cm
 
 	\includegraphics[width=0.8\linewidth]{screenshot004}
 %	\caption{}
 	\label{fig:screenshot004}
 %\end{figure}
  \vskip 0.4cm\vskip 0.4cm
-{\bf e. Giúp đỡ} \vskip 0.4cm
- - Có ba cách để hiển thị trang hướng dẫn cho các lệnh trong Git \vskip 0.4cm
- + git help <lệnh> \vskip 0.4cm
- + git <lệnh> \texttt{-{}-}help \vskip 0.4cm
- + man git-<lệnh>  \vskip 0.4cm
+\subsection{Giúp đỡ} 
+ Có ba cách để hiển thị trang hướng dẫn cho các lệnh trong Git
+\begin{itemize}
+\item git help <lệnh>
+\item git <lệnh> \texttt{-{}-}help
+\item man git-<lệnh> 
+\end{itemize}
  
-
-
-
-
 \section{Khởi tạo Repository}
-\hspace{0.6cm}{\bf a. Khởi tạo một repository trong một thư mục có sẵn} \vskip 0.4cm
-- Repository, hay còn gọi là Repo, trong tiếng Việt nghĩa là kho chứa. Repo là nơi chứa tất cả mã nguồn cho một dự án được quản lý bởi Git.\vskip 0.4cm
-- Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: \textit{git init}\vskip 0.4cm
-- Để di chuyển đến thư mục, ta sử dụng lệnh: {\it cd <đường dẫn thư mục> }\vskip 0.4cm
+
+\subsection{Khởi tạo một repository trong một thư mục có sẵn}
+\begin{itemize}
+\item Repository, hay còn gọi là Repo, trong tiếng Việt nghĩa là kho chứa. Repo là nơi chứa tất cả mã nguồn cho một dự án được quản lý bởi Git.
+\item Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: \textit{git init}
+\item Để di chuyển đến thư mục, ta sử dụng lệnh: {\it cd <đường dẫn thư mục> }
 
 	\includegraphics[width=0.8\linewidth]{screenshot005}
 
 	\label{fig:screenshot005}
-\vskip 0.4cm\vskip 0.4cm
 
-- Ở hình trên, sử dụng lệnh cd để di chuyển đến thư mục project chứa bài tập lớn cần quản lý có đường dẫn là {\it Q:/BT/project} và sau đó sử lệnh {\it git init} để tạo ra một thư mục tên là .git, thư mục này chính bộ khung xương của Repo.\vskip 0.4cm
-{\bf b. Sao chép một Repo có sẵn} \vskip 0.4cm
-- Nếu bạn muốn có một bản sao của một Git repo có sẵn, ví dụ như repo của một dự án mà bạn muốn tham gia, sử dụng lệnh {\it git clone <đường dẫn đến repo>}\vskip 0.4cm
-- Đường dẫn có thể là link dẫn đến kho lưu trữ mã nguồn của nhóm làm việc với bạn trên nền web như GitHub\vskip 0.4cm
-
+\item Ở hình trên, sử dụng lệnh cd để di chuyển đến thư mục project chứa bài tập lớn cần quản lý có đường dẫn là {\it Q:/BT/project} và sau đó sử lệnh {\it git init} để tạo ra một thư mục tên là .git, thư mục này chính bộ khung xương của Repo.
+\end{itemize}
+\subsection{Sao chép một Repo có sẵn}
+\begin{itemize}
+\item Nếu bạn muốn có một bản sao của một Git repo có sẵn, ví dụ như repo của một dự án mà bạn muốn tham gia, sử dụng lệnh {\it git clone <đường dẫn đến repo>}
+\item Đường dẫn có thể là link dẫn đến kho lưu trữ mã nguồn của nhóm làm việc với bạn trên nền web như GitHub
+\end{itemize}
 \section{Quản lý Repository}
 
-\hspace{0.6cm}{\bf a. Vòng tuần hoàn trạng thái của tệp}\vskip 0.4cm
+\subsection{Vòng tuần hoàn trạng thái của tệp}
 
 	\includegraphics[width=0.8\linewidth]{screenshot006}
 	
 	\label{fig:screenshot006}
-\vskip 0.4cm\vskip 0.4cm
-- Untracked: tệp chưa được theo dõi (track)\vskip 0.4cm
-- Unmodified: tệp đã được commit\vskip 0.4cm
-- Modified: tệp đã được chỉnh sửa và chưa commit\vskip 0.4cm
-- Staged: các tệp đã được theo dõi hoặc các tệp đã chỉnh sửa đang chờ để commit\vskip 0.4cm
-{\bf b. Kiểm tra trạng thái của tệp} \vskip 0.4cm
-- Lệnh \textit{git status} dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.\vskip 0.4cm
-+ Dưới đây, ta kiểm tra trạng thái của thư mục làm việc (working directory) hiện tại là project\vskip 0.4cm
+\begin{itemize}
+\item Untracked: tệp chưa được theo dõi (track)
+\item Unmodified: tệp đã được commit\vskip 0.4cm
+\item Modified: tệp đã được chỉnh sửa và chưa commit
+\item Staged: các tệp đã được theo dõi hoặc các tệp đã chỉnh sửa đang chờ để commit
+\end{itemize}
+\subsection{Kiểm tra trạng thái của tệp}
+\begin{itemize}
+\item Lệnh \textit{git status} dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.
+	\begin{itemize}
+		\item Dưới đây, ta kiểm tra trạng thái của thư mục làm việc (working directory) hiện tại là project
 
 	\includegraphics[width=0.8\linewidth]{screenshot007}
 
 	\label{fig:screenshot007}
-\vskip 0.4cm\vskip 0.4cm
-Ở hình trên, ta thấy tệp test.txt không được thêm vào Repo, đang ở trạng thái untracked (chưa được theo dõi)\vskip 0.4cm
-- Để theo dõi một tập tin, ta dùng lệnh {\it git add <tên tệp>}, cụ thể ở đây ta theo dõi tệp test.txt\vskip 0.4cm
+
+		\item Ở hình trên, ta thấy tệp test.txt không được thêm vào Repo, đang ở trạng thái untracked (chưa được theo dõi)
+	\end{itemize}
+\item Để theo dõi một tập tin, ta dùng lệnh {\it git add <tên tệp>}, cụ thể ở đây ta theo dõi tệp test.txt
 
 	\includegraphics[width=0.8\linewidth]{screenshot008}
 
 	\label{fig:screenshot008}
-\vskip 0.4cm\vskip 0.4cm
-{\bf c. Bỏ qua các tập tin} \vskip 0.4cm
-- Tệp .gitignore liệt kê những file mà mình không mong muốn cho vào Git (Git sẽ lờ những file đó đi)\vskip 0.4cm
-- Tạo file gitignore bằng lệnh touch .gitignore\vskip 0.4cm
-- Các pattern format hay dùng:\vskip 0.4cm
-•	Sử dụng \# để comment và có thể để cách dòng cho dễ đọc.\vskip 0.4cm
-•	Đơn giản nhất là tên file cần ignore: example.exe, example.txt, …\vskip 0.4cm
-•	Hay cả thư mục: example\_folder/\vskip 0.4cm
-•	Sử dụng * để tìm các file có cùng định dạng. Ví dụ như bạn muốn Git bỏ qua tất cả các file .xml trong project: *.xml\vskip 0.4cm
-Ví dụ: \vskip 0.4cm
-- Trong Repo hiện tại có thư mục bin và ta muốn Git bỏ qua thư mục đó\vskip 0.4cm
+\end{itemize}
+\subsection{Bỏ qua các tập tin}
+\begin{itemize}
+\item Tệp .gitignore liệt kê những file mà mình không mong muốn cho vào Git (Git sẽ lờ những file đó đi)
+\item Tạo file gitignore bằng lệnh touch .gitignore
+\item Các pattern format hay dùng:
+	\begin{itemize}
+	\item Sử dụng \# để comment và có thể để cách dòng cho dễ đọc. 
+	\item Đơn giản nhất là tên file cần ignore: example.exe, example.txt, …
+	Hay cả thư mục: example\_folder/
+	\item Sử dụng * để tìm các file có cùng định dạng. Ví dụ như bạn muốn Git bỏ qua tất cả các file .xml trong project: *.xml
+	\end{itemize}
+\item Ví dụ: 
+\begin{itemize}
+\item Trong Repo hiện tại có thư mục bin và ta muốn Git bỏ qua thư mục đó
 
 	\includegraphics[width=0.8\linewidth]{screenshot009}
 
 	\label{fig:screenshot009}
-\vskip 0.4cm\vskip 0.4cm
-- Ta chỉnh sửa file .gitignore để thêm thư mục bin vào\vskip 0.4cm
+
+\item Ta chỉnh sửa file .gitignore để thêm thư mục bin vào
 
 	\includegraphics[width=0.8\linewidth]{screenshot010}
 	
 	\label{fig:screenshot010}
-\vskip 0.4cm\vskip 0.4cm
-- Sau khi thêm bin vào .gitignore, ta kiếm tra lại trạng thái và thấy thư mục bin đã bị Git bỏ qua.
-\vskip 0.4cm
+
+\item Sau khi thêm bin vào .gitignore, ta kiếm tra lại trạng thái và thấy thư mục bin đã bị Git bỏ qua.
+
 	\includegraphics[width=0.8\linewidth]{screenshot011}
 
 	\label{fig:screenshot011}
-\vskip 0.4cm\vskip 0.4cm
-{\bf d. Xem các thay đổi} \vskip 0.4cm
-- Câu lệnh {\it git status} vẫn còn mơ hồ, ta không thể biết chính xác được cái gì đã được thay đổi\vskip 0.4cm
-- Lệnh {\it git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi\vskip 0.4cm
-- Câu lệnh {\it git diff \texttt{-{}-}staged} đã được tổ chức (staged) và chuẩn bị được commit.\vskip 0.4cm
-{\bf e. Commit các thay đổi}\vskip 0.4cm
-- Sau khi đã tổ chức các tập tin theo ý muốn, chúng ta có thể commit chúng\vskip 0.4cm
-- Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh \textit{git add} sẽ không được commit, do những file vẫn đang ở trạng thái modified.\vskip 0.4cm
-- Cách đơn giản để commit đó là dùng lệnh: {\it git commit –m “message”}\vskip 0.4cm
-+ Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh: {\it git commit -m “initial project version”} (initial project version chính là message, tóm tắt nội dung của lần commit này) để commit các tệp đang ở trạng thái staged\vskip 0.4cm
+\end{itemize}
+\end{itemize}
+\subsection{Xem các thay đổi} 
+\begin{itemize}
+\item Câu lệnh {\it git status} vẫn còn mơ hồ, ta không thể biết chính xác được cái gì đã được thay đổi
+\item Lệnh {\it git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi
+\item Câu lệnh {\it git diff \texttt{-{}-}staged} đã được tổ chức (staged) và chuẩn bị được commit.
+\end{itemize}
+\subsection{Commit các thay đổi}
+\begin{itemize}
+\item Sau khi đã tổ chức các tập tin theo ý muốn, chúng ta có thể commit chúng
+\item Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh \textit{git add} sẽ không được commit, do những file vẫn đang ở trạng thái modified.
+\item Cách đơn giản để commit đó là dùng lệnh: {\it git commit –m “message”}
+	\begin{itemize}
+	\item Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh: {\it git commit -m “initial project version”} (initial project version chính là message, tóm tắt nội dung của lần commit này) để commit các tệp đang ở trạng thái staged
 
 	\includegraphics[width=0.8\linewidth]{screenshot012}
 
 	\label{fig:screenshot012}
-\vskip 0.4cm\vskip 0.4cm
-+ Kết quả ta sẽ được như hình trên, tệp test.txt đã được commit.\vskip 0.4cm
-{\bf f. Bỏ qua khu vực tổ chức (staging area)}\vskip 0.4cm
-- Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước \textit{git add}\vskip 0.4cm
-- Có thế add hết tất cả các tệp untracked vào staged bằng lệnh: {\it git add \texttt{-{}-}all}\vskip 0.4cm
+
+	\item Kết quả ta sẽ được như hình trên, tệp test.txt đã được commit.
+\end{itemize}
+\end{itemize}
+\subsection{Bỏ qua khu vực tổ chức (staging area)}
+\begin{itemize}
+\item Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước \textit{git add}
+\item Có thế add hết tất cả các tệp untracked vào staged bằng lệnh: {\it git add \texttt{-{}-}all}
 
 	\includegraphics[width=0.8\linewidth]{screenshot013}
 
 	\label{fig:screenshot013}
-\vskip 0.4cm\vskip 0.4cm
-- Ở hình trên, có 3 tệp untracked, sử dụng {\it git add \texttt{-{}-}all} để đưa cả 3 tệp vào stage area cùng lúc\vskip 0.4cm
-- Sau đó commit 1 lần 3 tệp trên bằng lệnh {\it git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới\vskip 0.4cm
+
+\item Ở hình trên, có 3 tệp tracked, sử dụng {\it git add \texttt{-{}-}all} để đưa cả 3 tệp vào stage area cùng lúc
+\item Sau đó commit 1 lần 3 tệp trên bằng lệnh {\it git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới
 
 	\includegraphics[width=0.8\linewidth]{screenshot014}
 
-	\label{fig:screenshot014}\vskip 0.4cm\vskip 0.4cm
-
-{\bf g. Xoá tập tin} \vskip 0.4cm
-- {\it git rm}: Xoá một tập tin khỏi staging area, đồng thời cũng xoá tập tin đó trên ổ cứng.\vskip 0.4cm
-- {\it git rm \texttt{-{}-}cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên ổ cứng\vskip 0.4cm
+	\label{fig:screenshot014}
+\end{itemize}
+\subsection{Xoá tập tin} 
+\begin{itemize}
+\item {\it git rm}: Xoá một tập tin khỏi staging area, đồng thời cũng xoá tập tin đó trên ổ cứng.
+\item {\it git rm \texttt{-{}-}cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên ổ cứng
 
 
 	\includegraphics[width=0.8\linewidth]{screenshot015}
 	
 	\label{fig:screenshot015}
-\vskip 0.4cm\vskip 0.4cm
-{\bf h. Di chuyển tập tin}
-- Để đổi tên một tập tin trong Git, ta dùng lệnh sau: {\it git mv file\_from file\_to}\vskip 0.4cm
+\item Đổi tên tệp tin: Để đổi tên một tập tin trong Git, ta dùng lệnh sau: {\it git mv file\_from file\_to}
 
 	\includegraphics[width=0.8\linewidth]{screenshot016}
 
 	\label{fig:screenshot016}
-
-
-
-
+\end{itemize}
 	\newpage
 \section{Xem lịch sử commit}
-\hspace{0.6cm}- Áp dụng khi xem lại các dòng code, các đoạn commit có sai sót gì, kiểm tra các đoạn chỉnh sửa những gì\vskip 0.4cm
-- Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh: {\it git log}\vskip 0.4cm
+\begin{itemize}
+\item Áp dụng khi xem lại các dòng code, các đoạn commit có sai sót gì, kiểm tra các đoạn chỉnh sửa những gì\vskip 0.4cm
+\item Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh: {\it git log}
 
 	\includegraphics[width=0.8\linewidth]{screenshot017}
 
 	\label{fig:screenshot017}
-\vskip 0.4cm\vskip 0.4cm
-- Ở hình trên ta thấy Git đã hiển thị tất cả các lịch sử hoạt động của user. Ví dụ: Nguyen Quy đã commit file quy.txt vào 8:13 29/11/2018\vskip 0.4cm
-- Có rất nhiều tuỳ chọn khác nhau cho lệnh git log, giúp ta hiển thị thứ ta thực sự muốn\vskip 0.4cm
-+ Một trong những tuỳ chọn có ích nhất là -p : hiển thị sự khác nhau của từng commit. Có thể thêm -<x> để hiển thị x commit gần nhất. VD hiển thị sự khác nhau giữa 2 commit gần nhất: {\it git log –p -2}
-\vskip 0.4cm
+
+\item Ở hình trên ta thấy Git đã hiển thị tất cả các lịch sử hoạt động của user. Ví dụ: Nguyen Quy đã commit file quy.txt vào 8:13 29/11/2018\vskip 0.4cm
+\item Có rất nhiều tuỳ chọn khác nhau cho lệnh git log, giúp ta hiển thị thứ ta thực sự muốn
+	\begin{itemize}
+		\item Một trong những tuỳ chọn có ích nhất là -p : hiển thị sự khác nhau của từng commit. Có thể thêm -<x> để hiển thị x commit gần nhất. VD hiển thị sự khác nhau giữa 2 commit gần nhất: {\it git log –p -2}
+
 	\includegraphics[width=0.8\linewidth]{screenshot018}
 	
 	\label{fig:screenshot018}
-\vskip 0.4cm\vskip 0.4cm
-+ Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh {\it diff \texttt{-{}-}git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a, b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
 
-- Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn \texttt{-{}-}stat. Lệnh {\it git log \texttt{-{}-}stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.\vskip 0.4cm
-
+\item Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh {\it diff \texttt{-{}-}git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a, b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
+\end{itemize}
+\item Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn \texttt{-{}-}stat. Lệnh {\it git log \texttt{-{}-}stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.
 	\includegraphics[width=0.8\linewidth]{screenshot019}
 
 	\label{fig:screenshot019}
-\vskip 0.4cm\vskip 0.4cm
-+ Như hình trên, Git đã hiện thị vào lần commit lúc 8:35 29/11, đã có 1 tệp thay đổi và tệp đó có thêm 1 dòng\vskip 0.4cm
-- Một lựa chọn hữu ích khác là \texttt{-{}-}pretty. Lựa chọn này thay đổi phần hiển thị theo các cách khác nhau.\vskip 0.4cm
-+ Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: {\it git log \texttt{-{}-}pretty=oneline}\vskip 0.4cm
+\begin{itemize}
+\item Như hình trên, Git đã hiện thị vào lần commit lúc 8:35 29/11, đã có 1 tệp thay đổi và tệp đó có thêm 1 dòng
+\end{itemize}
+\item Một lựa chọn hữu ích khác là \texttt{-{}-}pretty. Lựa chọn này thay đổi phần hiển thị theo các cách khác nhau.
+\begin{itemize}
+\item Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: {\it git log \texttt{-{}-}pretty=oneline}
 
 	\includegraphics[width=0.8\linewidth]{screenshot020}
 	
 	\label{fig:screenshot020}
-\vskip 0.4cm\vskip 0.4cm
-+ Ta đã sử dụng {\it option \texttt{-{}-}pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit\vskip 0.4cm
-+ Lựa chọn thú vị nhất là {\it \texttt{-{}-}pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
-\vskip 0.4cm
+
+\item Ta đã sử dụng {\it option \texttt{-{}-}pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit
+\end{itemize}
+\item Lựa chọn thú vị nhất là {\it \texttt{-{}-}pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
+
 	\includegraphics[width=0.8\linewidth]{screenshot021}
 
 	\label{fig:screenshot021}
-\vskip 0.4cm\vskip 0.4cm
-+ Ví dụ: {\it git log \texttt{-{}-}pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được\vskip 0.4cm
+
+\begin{itemize}
+\item Ví dụ: {\it git log \texttt{-{}-}pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được
 
 	\includegraphics[width=0.8\linewidth]{screenshot022}
 
 	\label{fig:screenshot022}
-\vskip 0.4cm\vskip 0.4cm
-+ Kết quả hiển thị commit ID thu gọn, tên tác giả, thời gian commit và tin nhắn cho mỗi lần commit. Với các option format này bạn có thể vận dụng cho việc báo cáo về tiến độ và kiểm soát làm việc cho từng thành viên\vskip 0.4cm
- Giới hạn thông tin đầu ra\vskip 0.4cm
-- Các lựa chọn giới hạn thời gian thông tin đầu ra như \texttt{-{}-}since và \texttt{-{}-}until khá hữu ích\vskip 0.4cm
+
+\item Kết quả hiển thị commit ID thu gọn, tên tác giả, thời gian commit và tin nhắn cho mỗi lần commit. Với các option format này bạn có thể vận dụng cho việc báo cáo về tiến độ và kiểm soát làm việc cho từng thành viên
+\end{itemize}
+ \item Giới hạn thông tin đầu ra
+\begin{itemize}
+\item Các lựa chọn giới hạn thời gian thông tin đầu ra như \texttt{-{}-}since và \texttt{-{}-}until khá hữu ích
 
 	\includegraphics[width=0.8\linewidth]{screenshot023}
 
 	\label{fig:screenshot023}
-\vskip 0.4cm\vskip 0.4cm
-+ Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:{\it git log \texttt{-{}-}pretty="\%h - \%s" \texttt{-{}-}author="Nguyen Quy" \texttt{-{}-}since=2.week }. Kết quả sẽ được:\vskip 0.4cm
+
+\item Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:{\it git log \texttt{-{}-}pretty="\%h - \%s" \texttt{-{}-}author="Nguyen Quy" \texttt{-{}-}since=2.week }. Kết quả sẽ được:
 
 	\includegraphics[width=0.8\linewidth]{screenshot024}
 
 	\label{fig:screenshot024}
-\vskip 0.4cm\vskip 0.4cm
-+ Các option trên rất thích hợp cho bạn điều tra sai phạm trong dự án như là: tìm thấy người đã xóa tệp hay chỉnh sửa sai, thời gian xóa,…\vskip 0.4cm
-- Ngoài ra còn 1 số option khác bạn có thể tìm hiểu thêm:
-\vskip 0.4cm
-	\includegraphics[width=0.8\linewidth]{screenshot025}
 
-	\label{fig:screenshot025}
+\item Các option trên rất thích hợp cho bạn điều tra sai phạm trong dự án như là: tìm thấy người đã xóa tệp hay chỉnh sửa sai, thời gian xóa,…
 
-
-
+\end{itemize}
+\end{itemize}
 	
 \section{Hủy bỏ thay đổi}
-\hspace{0.6cm}{\bf a. Undoing thing} \vskip 0.4cm
-- Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi phần message và muốn thử lại lần commit đó thì sử dụng: {\it git commit –amend}\vskip 0.4cm
-+ Ban đầu ta chỉ có một tệp 6.txt mới được tạo và ta muốn thêm vào commit với tin nhắn là “commit 1”\vskip 0.4cm
+\subsection{Undoing thing}
+Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi phần message và muốn thử lại lần commit đó thì sử dụng: {\it git commit –amend}
+\begin{itemize}
+\item Ban đầu ta chỉ có một tệp 6.txt mới được tạo và ta muốn thêm vào commit với tin nhắn là “commit 1”
 
 	\includegraphics[width=0.8\linewidth]{screenshot026}
 
 	\label{fig:screenshot026}
-\vskip 0.4cm\vskip 0.4cm
-+ Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh: {\it git commit \texttt{-{}-}amend}\vskip 0.4cm
+
+\item Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh: {\it git commit \texttt{-{}-}amend}
 
 	\includegraphics[width=0.8\linewidth]{screenshot027}
 
 	\label{fig:screenshot027}
-\vskip 0.4cm\vskip 0.4cm
-+ Kết quả trong \textit{git log} là:\vskip 0.4cm
+
+\item Kết quả trong \textit{git log} là:
 
 	\includegraphics[width=0.8\linewidth]{screenshot028}
 	
 	\label{fig:screenshot028}
-\vskip 0.4cm\vskip 0.4cm
+\end{itemize}
 
-{\bf b. Unstaging a staged file}\vskip 0.4cm
-- Giả sử bạn đã chỉnh sửa hai tệp và muốn commit từng chỉnh sửa riêng, nhưng bạn vô tình gõ \textit{git add *} và tổ chức (staged) cả hai\vskip 0.4cm
-- Để unstage một tập tin: {\it git reset HEAD <name>}\vskip 0.4cm
-Ví dụ: Hai tệp 1.txt và 2.txt đã được chỉnh sửa và đang ở trạng thái modified và thêm vào staged\vskip 0.4cm
+\subsection{Unstaging a staged file}
+\begin{itemize}
+\item Giả sử bạn đã chỉnh sửa hai tệp và muốn commit từng chỉnh sửa riêng, nhưng bạn vô tình gõ \textit{git add *} và tổ chức (staged) cả hai
+\item Để unstage một tập tin: {\it git reset HEAD <name>}
+	\begin{itemize}
+\item Ví dụ: Hai tệp 1.txt và 2.txt đã được chỉnh sửa và đang ở trạng thái modified và thêm vào staged
 
 	\includegraphics[width=0.8\linewidth]{screenshot029}
 
 	\label{fig:screenshot029}
-\vskip 0.4cm\vskip 0.4cm
-+ Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh: {\it git reset HEAD 2.txt}. Kết quả sẽ là:\vskip 0.4cm
+
+\item Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh: {\it git reset HEAD 2.txt}. Kết quả sẽ là:
 
 	\includegraphics[width=0.8\linewidth]{screenshot030}
 
 	\label{fig:screenshot030}
-\vskip 0.4cm\vskip 0.4cm
-{\bf c. Unmodifying a modified file}\vskip 0.4cm
-- Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh: {\it git checkout \texttt{-{}-}<tên tệp>}\vskip 0.4cm
-- Lưu ý rằng đây là một lệnh nguy hiểm – mọi thay đổi của bạn đối với tệp sẽ bị mất. Hãy chắc chắn là bạn thực sự muốn bỏ các thay đổi vừa thực hiện\vskip 0.4cm
-Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh: {\it git checkout \texttt{-{}-}2.txt}. Kết quả thu được\vskip 0.4cm
+\end{itemize}
+\end{itemize}
+\subsection{Unmodifying a modified file}
+\begin{itemize}
+\item Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh: {\it git checkout \texttt{-{}-}<tên tệp>}\vskip 0.4cm
+\item Lưu ý rằng đây là một lệnh nguy hiểm – mọi thay đổi của bạn đối với tệp sẽ bị mất. Hãy chắc chắn là bạn thực sự muốn bỏ các thay đổi vừa thực hiện
+	\begin{itemize}
+\item Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh: {\it git checkout \texttt{-{}-}2.txt}. Kết quả thu được
 
 	\includegraphics[width=0.8\linewidth]{screenshot031}
 
 	\label{fig:screenshot031}
-\vskip 0.4cm\vskip 0.4cm
-+Tệp 2.txt đã quay trở lại trước khi thay đổi và Git thông báo không có sự thay đổi nào\vskip 0.4cm
 
+\item Tệp 2.txt đã quay trở lại trước khi thay đổi và Git thông báo không có sự thay đổi nào
+\end{itemize}\end{itemize}
 
 
 

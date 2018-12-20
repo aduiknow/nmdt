@@ -161,16 +161,16 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 \item Tính toàn vẹn: Các thay đổi trong Git được tham chiếu bằng một mã băm sử dụng cơ chế mã hóa SHA-1. Đồng thời, các thay đổi trong Git đều được thêm vào cơ sở dữ liệu do đó rất khó bị mất khi thay đổi và truyền tải dữ liệu. Với Git, người dùng có thể thoải mái thử nghiệm, lưu trữ mà không sợ ảnh hưởng đến dự án.
 \item Tổ chức dữ liệu trong Git: các tập tin trong Git tồn tại ở một trong ba trạng thái là modified, staged và committed.
 	\begin{itemize}
-		\item {\it Modified}: tập tin được sửa nhưng chưa được đánh dấu để commit (nằm trong mục Unstaged files).
-		\item {\it	Staged}: tập tin được đánh dấu sẽ được commit (nằm trong mục Staged files).
-		\item {\it Committed}: tập tin đã được commit và lưu trữ trong cơ sở dữ liệu.
+		\item \textcolor{blue}{\bf Modified}: tập tin được sửa nhưng chưa được đánh dấu để commit (nằm trong mục Unstaged files).
+		\item \textcolor{blue}{\bf 	Staged}: tập tin được đánh dấu sẽ được commit (nằm trong mục Staged files).
+		\item \textcolor{blue}{\bf Committed}: tập tin đã được commit và lưu trữ trong cơ sở dữ liệu.
 		\item[$\nabla$] Một tập tin có thể vừa ở trạng thái modified vừa ở trạng thái staged hoặc committed. Điều này xảy ra khi người dùng chỉ staged một số dòng trong tập tin.
 	\end{itemize}
 \item Ba trạng thái này tạo ra ba phần riêng biệt của dự án:
 	\begin{itemize}
-		\item {\it Working directory}: là bản sao của một phiên bản của dự án. Người dùng sẽ làm việc với các tập tin ở khu vực này. Mọi thay đổi của các tập tin sẽ được hiển thị ở đây.
-		\item {\it Staging area}: là một tập tin trong thư mục Git. Tập tin này chứa thông tin về những thay đổi sẽ được commit.
-		\item {\it Git directory}: đây là nơi Git lưu trữ các siêu dữ liệu (metadata) và cơ sở dữ liệu của toàn bộ dự án. Đây cũng là phần quan trọng nhất của Git, nó là một bản sao của dự án được sao chép (clone) từ repository trên server Git.
+		\item \textcolor{blue}{\bf Working directory}: là bản sao của một phiên bản của dự án. Người dùng sẽ làm việc với các tập tin ở khu vực này. Mọi thay đổi của các tập tin sẽ được hiển thị ở đây.
+		\item \textcolor{blue}{\bf Staging area}: là một tập tin trong thư mục Git. Tập tin này chứa thông tin về những thay đổi sẽ được commit.
+		\item \textcolor{blue}{\bf Git directory}: đây là nơi Git lưu trữ các siêu dữ liệu (metadata) và cơ sở dữ liệu của toàn bộ dự án. Đây cũng là phần quan trọng nhất của Git, nó là một bản sao của dự án được sao chép (clone) từ repository trên server Git.
 		\end{itemize}
 \end{itemize}
 \newpage
@@ -179,7 +179,7 @@ Sinh viên:&{\bf NGUYỄN PHẠM ANH TÀI - 1813897}\\
 %\addcontentsline{toc}{chapter}{{\bf Download và cài đặt}\rm} 
 
 \begin{itemize}
-\item Link download: {\it https://git-scm.com/downloads }
+\item Link download: \textcolor{blue}{\bf https://git-scm.com/downloads }
 \item Git hỗ trợ các nền tảng Windows, MacOS, Linux/UNIX
 \item Hiện tại là phiên bản 2.19.2
 \end{itemize}
@@ -204,8 +204,8 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \item Điều này quan trọng bởi vì mỗi commit trong Git đều sử dụng thông tin này, những thông tin này sẽ mãi gắn với các commit.
 \item Hai thông tin này phải được cái đặt trước khi thực hiện mọi thao tác trên Git vì khi bạn ủy thác thông tin lên Git thì Git sẽ phân biệt và nhận dạng thông qua username và useremail.
 	\begin{itemize}
-		\item Để đặt tên người dùng, ta dùng lệnh: {\it  git config \texttt{-{}-}global user.name “Your name”}
-		\item Để đặt email: {\it git config \texttt{-{}-}global user.email john@example.com}
+		\item Để đặt tên người dùng, ta dùng lệnh: \textcolor{blue}{\bf  git config \texttt{-{}-}global user.name “Your name”}
+		\item Để đặt email: \textcolor{blue}{\bf git config \texttt{-{}-}global user.email john@example.com}
 	\end{itemize}
 \end{itemize}
 %\begin{figure}
@@ -220,7 +220,7 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \begin{itemize}
 \item Ở bước cài đặt Git, chúng ta đã chọn Visual Studio Code làm công cụ chỉnh sửa mặc định.
 \item Nếu muốn thay đổi công cụ mặc định đã được cài đặt trước đó thì có thể sử dụng lệnh:
-{\it git config \texttt{-{}-}global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}
+\textcolor{blue}{\bf git config \texttt{-{}-}global core.editor “ ’[đường dẫn đến công cụ trong máy bạn]’ -multilnst -nosession”}
 \item Ví dụ: muốn cho Visual Studio Code làm công cụ soạn thảo mặc định cho Git
 \end{itemize}
 \vskip 0.4cm
@@ -231,12 +231,12 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \vskip 0.4cm \vskip 0.4cm
 \subsection{Kiểm tra các cài đặt}
 \begin{itemize}
-\item Khi muốn kiểm tra các cài đặt, ta dùng lệnh git config \texttt{-{}-}list. Kết quả như hình bên dưới: 
-\vskip 0.4cm
-	\includegraphics[width=0.8\linewidth]{screenshot003}
-	\label{fig:screenshot003}\vskip 0.4cm\vskip 0.4cm
+\item Khi muốn kiểm tra các cài đặt, ta dùng lệnh \textcolor{blue}{\bf git config \texttt{-{}-}list}. Kết quả như hình bên dưới: 
 
-\item Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh: {\it git config \{khoá\}}
+	\includegraphics[width=0.8\linewidth]{screenshot003}
+	\label{fig:screenshot003}
+	
+\item Ta có thể kiểm tra giá trị của từng khoá riêng biệt bằng lệnh: \textcolor{blue}{\bf git config \{khoá\}}
 \item Ví dụ như ta muốn xem tên người dùng và địa chỉ email, ta gõ lệnh như trong hình: 
 \end{itemize}
 \vskip 0.4cm
@@ -249,9 +249,9 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \subsection{Giúp đỡ} 
  Có ba cách để hiển thị trang hướng dẫn cho các lệnh trong Git
 \begin{itemize}
-\item git help <lệnh>
-\item git <lệnh> \texttt{-{}-}help
-\item man git-<lệnh> 
+\item \textcolor{blue}{\bf git help <lệnh>}
+\item \textcolor{blue}{\bf git <lệnh> \texttt{-{}-}help}
+\item \textcolor{blue}{\bf man git-<lệnh>}
 \end{itemize}
  
 \section{Khởi tạo Repository}
@@ -259,18 +259,18 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \subsection{Khởi tạo một repository trong một thư mục có sẵn}
 \begin{itemize}
 \item Repository, hay còn gọi là Repo, trong tiếng Việt nghĩa là kho chứa. Repo là nơi chứa tất cả mã nguồn cho một dự án được quản lý bởi Git.
-\item Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: \textit{git init}
-\item Để di chuyển đến thư mục, ta sử dụng lệnh: {\it cd <đường dẫn thư mục> }
+\item Nếu bạn muốn bắt đầu quản lý một dự án có sẵn bằng Git, bạn cần di chuyển đến thư mục đó sử dụng bash và gõ: \textcolor{blue}{\bf git init}
+\item Để di chuyển đến thư mục, ta sử dụng lệnh: \textcolor{blue}{\bf cd <đường dẫn thư mục> }
 
 	\includegraphics[width=0.8\linewidth]{screenshot005}
 
 	\label{fig:screenshot005}
 
-\item Ở hình trên, sử dụng lệnh cd để di chuyển đến thư mục project chứa bài tập lớn cần quản lý có đường dẫn là {\it Q:/BT/project} và sau đó sử lệnh {\it git init} để tạo ra một thư mục tên là .git, thư mục này chính bộ khung xương của Repo.
+\item Ở hình trên, sử dụng lệnh cd để di chuyển đến thư mục project chứa bài tập lớn cần quản lý có đường dẫn là \textcolor{blue}{\bf Q:/BT/project} và sau đó sử lệnh \textcolor{blue}{\bf git init} để tạo ra một thư mục tên là .git, thư mục này chính bộ khung xương của Repo.
 \end{itemize}
 \subsection{Sao chép một Repo có sẵn}
 \begin{itemize}
-\item Nếu bạn muốn có một bản sao của một Git repo có sẵn, ví dụ như repo của một dự án mà bạn muốn tham gia, sử dụng lệnh {\it git clone <đường dẫn đến repo>}
+\item Nếu bạn muốn có một bản sao của một Git repo có sẵn, ví dụ như repo của một dự án mà bạn muốn tham gia, sử dụng lệnh \textcolor{blue}{\bf git clone <đường dẫn đến repo>}
 \item Đường dẫn có thể là link dẫn đến kho lưu trữ mã nguồn của nhóm làm việc với bạn trên nền web như GitHub
 \end{itemize}
 \section{Quản lý Repository}
@@ -281,14 +281,14 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 	
 	\label{fig:screenshot006}
 \begin{itemize}
-\item Untracked: tệp chưa được theo dõi (track)
-\item Unmodified: tệp đã được commit\vskip 0.4cm
-\item Modified: tệp đã được chỉnh sửa và chưa commit
-\item Staged: các tệp đã được theo dõi hoặc các tệp đã chỉnh sửa đang chờ để commit
+\item \textcolor{blue}{\bf Untracked}: tệp chưa được theo dõi (track)
+\item \textcolor{blue}{\bf Unmodified}: tệp đã được commit\vskip 0.4cm
+\item \textcolor{blue}{\bf Modified}: tệp đã được chỉnh sửa và chưa commit
+\item \textcolor{blue}{\bf Staged}: các tệp đã được theo dõi hoặc các tệp đã chỉnh sửa đang chờ để commit
 \end{itemize}
 \subsection{Kiểm tra trạng thái của tệp}
 \begin{itemize}
-\item Lệnh \textit{git status} dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.
+\item Lệnh \textcolor{blue}{\bf git status} dùng để kiểm tra trạng thái của thư mục đang làm việc hiện tại.
 	\begin{itemize}
 		\item Dưới đây, ta kiểm tra trạng thái của thư mục làm việc (working directory) hiện tại là project
 
@@ -296,9 +296,9 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 
 	\label{fig:screenshot007}
 
-		\item Ở hình trên, ta thấy tệp test.txt không được thêm vào Repo, đang ở trạng thái untracked (chưa được theo dõi)
+		\item Ở hình trên, ta thấy tệp \textcolor{blue}{\bf test.txt} không được thêm vào Repo, đang ở trạng thái untracked (chưa được theo dõi)
 	\end{itemize}
-\item Để theo dõi một tập tin, ta dùng lệnh {\it git add <tên tệp>}, cụ thể ở đây ta theo dõi tệp test.txt
+\item Để theo dõi một tập tin, ta dùng lệnh \textcolor{blue}{\bf git add <tên tệp>}, cụ thể ở đây ta theo dõi tệp \textcolor{blue}{\bf test.txt}
 
 	\includegraphics[width=0.8\linewidth]{screenshot008}
 
@@ -306,8 +306,8 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \end{itemize}
 \subsection{Bỏ qua các tập tin}
 \begin{itemize}
-\item Tệp .gitignore liệt kê những file mà mình không mong muốn cho vào Git (Git sẽ lờ những file đó đi)
-\item Tạo file gitignore bằng lệnh touch .gitignore
+\item Tệp \textcolor{blue}{\bf .gitignore} liệt kê những file mà mình không mong muốn cho vào Git (Git sẽ lờ những file đó đi)
+\item Tạo file gitignore bằng lệnh \textcolor{blue}{\bf touch .gitignore}
 \item Các pattern format hay dùng:
 	\begin{itemize}
 	\item Sử dụng \# để comment và có thể để cách dòng cho dễ đọc. 
@@ -323,13 +323,13 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 
 	\label{fig:screenshot009}
 
-\item Ta chỉnh sửa file .gitignore để thêm thư mục bin vào
+\item Ta chỉnh sửa file \textcolor{blue}{\bf .gitignore }để thêm thư mục bin vào
 
 	\includegraphics[width=0.8\linewidth]{screenshot010}
 	
 	\label{fig:screenshot010}
 
-\item Sau khi thêm bin vào .gitignore, ta kiếm tra lại trạng thái và thấy thư mục bin đã bị Git bỏ qua.
+\item Sau khi thêm bin vào \textcolor{blue}{\bf .gitignore}, ta kiếm tra lại trạng thái và thấy thư mục bin đã bị Git bỏ qua.
 
 	\includegraphics[width=0.8\linewidth]{screenshot011}
 
@@ -338,17 +338,17 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \end{itemize}
 \subsection{Xem các thay đổi} 
 \begin{itemize}
-\item Câu lệnh {\it git status} vẫn còn mơ hồ, ta không thể biết chính xác được cái gì đã được thay đổi
-\item Lệnh {\it git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi
-\item Câu lệnh {\it git diff \texttt{-{}-}staged} đã được tổ chức (staged) và chuẩn bị được commit.
+\item Câu lệnh \textcolor{blue}{\bf git status} vẫn còn mơ hồ, ta không thể biết chính xác được cái gì đã được thay đổi
+\item Lệnh \textcolor{blue}{\bf git diff} cho ta biết chính xác từng dòng được thêm vào hay xoá đi
+\item Câu lệnh \textcolor{blue}{\bf git diff \texttt{-{}-}staged} đã được tổ chức (staged) và chuẩn bị được commit.
 \end{itemize}
 \subsection{Commit các thay đổi}
 \begin{itemize}
 \item Sau khi đã tổ chức các tập tin theo ý muốn, chúng ta có thể commit chúng
-\item Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh \textit{git add} sẽ không được commit, do những file vẫn đang ở trạng thái modified.
-\item Cách đơn giản để commit đó là dùng lệnh: {\it git commit –m “message”}
+\item Lưu ý rằng những thứ chưa được tổ chức (unstaged) – những file được tạo ra hoặc chỉnh sửa sau khi bạn chạy lệnh \textcolor{blue}{\bf git add} sẽ không được commit, do những file vẫn đang ở trạng thái modified.
+\item Cách đơn giản để commit đó là dùng lệnh: \textcolor{blue}{\bf git commit –m “message”}
 	\begin{itemize}
-	\item Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh: {\it git commit -m “initial project version”} (initial project version chính là message, tóm tắt nội dung của lần commit này) để commit các tệp đang ở trạng thái staged
+	\item Sau khi đã đưa các tệp lên trạng thái staged ta phải sử dụng lệnh: \textcolor{blue}{\bf git commit -m “initial project version”} (initial project version chính là message, tóm tắt nội dung của lần commit này) để commit các tệp đang ở trạng thái staged
 
 	\includegraphics[width=0.8\linewidth]{screenshot012}
 
@@ -359,15 +359,15 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \end{itemize}
 \subsection{Bỏ qua khu vực tổ chức (staging area)}
 \begin{itemize}
-\item Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước \textit{git add}
-\item Có thế add hết tất cả các tệp untracked vào staged bằng lệnh: {\it git add \texttt{-{}-}all}
+\item Thêm lựa chọn -a vào câu lệnh git commit sẽ làm Git tự động tổ chức (stage) tất cả những tệp đã được theo dõi trước khi thực hiện commit, cho phép ta bỏ qua bước \textcolor{blue}{\bf git add}
+\item Có thế add hết tất cả các tệp untracked vào staged bằng lệnh: \textcolor{blue}{\bf git add \texttt{-{}-}all}
 
 	\includegraphics[width=0.8\linewidth]{screenshot013}
 
 	\label{fig:screenshot013}
 
-\item Ở hình trên, có 3 tệp tracked, sử dụng {\it git add \texttt{-{}-}all} để đưa cả 3 tệp vào stage area cùng lúc
-\item Sau đó commit 1 lần 3 tệp trên bằng lệnh {\it git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới
+\item Ở hình trên, có 3 tệp tracked, sử dụng \textcolor{blue}{\bf git add \texttt{-{}-}all} để đưa cả 3 tệp vào stage area cùng lúc
+\item Sau đó commit 1 lần 3 tệp trên bằng lệnh \textcolor{blue}{\bf git commit –a –m “commit flie”}, kết quả sẽ được như hình dưới
 
 	\includegraphics[width=0.8\linewidth]{screenshot014}
 
@@ -375,14 +375,14 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \end{itemize}
 \subsection{Xoá tập tin} 
 \begin{itemize}
-\item {\it git rm}: Xoá một tập tin khỏi staging area, đồng thời cũng xoá tập tin đó trên ổ cứng.
-\item {\it git rm \texttt{-{}-}cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên ổ cứng
+\item \textcolor{blue}{\bf git rm}: Xoá một tập tin khỏi staging area, đồng thời cũng xoá tập tin đó trên ổ cứng.
+\item \textcolor{blue}{\bf git rm \texttt{-{}-}cached} : tập tin không còn bị kiếm soát bởi Git nhưng mà vẫn còn trên ổ cứng
 
 
 	\includegraphics[width=0.8\linewidth]{screenshot015}
 	
 	\label{fig:screenshot015}
-\item Đổi tên tệp tin: Để đổi tên một tập tin trong Git, ta dùng lệnh sau: {\it git mv file\_from file\_to}
+\item Đổi tên tệp tin: Để đổi tên một tập tin trong Git, ta dùng lệnh sau: \textcolor{blue}{\bf git mv file\_from file\_to}
 
 	\includegraphics[width=0.8\linewidth]{screenshot016}
 
@@ -392,7 +392,7 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \section{Xem lịch sử commit}
 \begin{itemize}
 \item Áp dụng khi xem lại các dòng code, các đoạn commit có sai sót gì, kiểm tra các đoạn chỉnh sửa những gì\vskip 0.4cm
-\item Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh: {\it git log}
+\item Công cụ đơn giản và tốt nhất để thực hiện việc này là lệnh: \textcolor{blue}{\bf git log}
 
 	\includegraphics[width=0.8\linewidth]{screenshot017}
 
@@ -401,15 +401,15 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \item Ở hình trên ta thấy Git đã hiển thị tất cả các lịch sử hoạt động của user. Ví dụ: Nguyen Quy đã commit file quy.txt vào 8:13 29/11/2018\vskip 0.4cm
 \item Có rất nhiều tuỳ chọn khác nhau cho lệnh git log, giúp ta hiển thị thứ ta thực sự muốn
 	\begin{itemize}
-		\item Một trong những tuỳ chọn có ích nhất là -p : hiển thị sự khác nhau của từng commit. Có thể thêm -<x> để hiển thị x commit gần nhất. VD hiển thị sự khác nhau giữa 2 commit gần nhất: {\it git log –p -2}
+		\item Một trong những tuỳ chọn có ích nhất là -p : hiển thị sự khác nhau của từng commit. Có thể thêm -<x> để hiển thị x commit gần nhất. VD hiển thị sự khác nhau giữa 2 commit gần nhất: \textcolor{blue}{\bf git log –p -2}
 
 	\includegraphics[width=0.8\linewidth]{screenshot018}
 	
 	\label{fig:screenshot018}
 
-\item Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh {\it diff \texttt{-{}-}git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a, b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
+\item Ở hình trên chỉ hiển thị 2 hành động gần nhất nhưng có thêm một vài thông số. Ví dụ: bạn có thể sử dụng lệnh \textcolor{blue}{\bf diff \texttt{-{}-}git a/5.txt b/5.txt} để so sánh sự thay đổi của tệp 5.txt (a, b ở đây chỉ phiên bản của tệp)\vskip 0.4cm
 \end{itemize}
-\item Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn \texttt{-{}-}stat. Lệnh {\it git log \texttt{-{}-}stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.
+\item Nếu ta muốn xem một bản thống kê tóm tắt cho mỗi commit, ta dùng lựa chọn \texttt{-{}-}stat. Lệnh \textcolor{blue}{\bf git log \texttt{-{}-}stat} sẽ in ra phía dưới mỗi commit danh sách các tập tin đã chỉnh sửa, bao nhiêu tập tin được sửa, và bao nhiêu dòng trong các tập tin đó được thêm vào hay xoá đi.
 	\includegraphics[width=0.8\linewidth]{screenshot019}
 
 	\label{fig:screenshot019}
@@ -418,22 +418,22 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 \end{itemize}
 \item Một lựa chọn hữu ích khác là \texttt{-{}-}pretty. Lựa chọn này thay đổi phần hiển thị theo các cách khác nhau.
 \begin{itemize}
-\item Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: {\it git log \texttt{-{}-}pretty=oneline}
+\item Lựa chọn oneline in ra mỗi commit trên một dòng, thuận tiện cho việc xem nhiều commit: \textcolor{blue}{\bf git log \texttt{-{}-}pretty=oneline}
 
 	\includegraphics[width=0.8\linewidth]{screenshot020}
 	
 	\label{fig:screenshot020}
 
-\item Ta đã sử dụng {\it option \texttt{-{}-}pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit
+\item Ta đã sử dụng \textcolor{blue}{\bf option \texttt{-{}-}pretty=oneline} để hiển thị mỗi commit chỉ là một dòng gồm commit ID và tin nhắn của mỗi lần commit
 \end{itemize}
-\item Lựa chọn thú vị nhất là {\it \texttt{-{}-}pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
+\item Lựa chọn thú vị nhất là \textcolor{blue}{\bf \texttt{-{}-}pretty=format}, cho phép ta chỉ định định dạng riêng của phần hiển thị.
 
 	\includegraphics[width=0.8\linewidth]{screenshot021}
 
 	\label{fig:screenshot021}
 
 \begin{itemize}
-\item Ví dụ: {\it git log \texttt{-{}-}pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được
+\item Ví dụ: \textcolor{blue}{\bf git log \texttt{-{}-}pretty=format:”\%h - \%an, \%ar : \%s”}. Kết quả thu được
 
 	\includegraphics[width=0.8\linewidth]{screenshot022}
 
@@ -449,7 +449,7 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 
 	\label{fig:screenshot023}
 
-\item Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:{\it git log \texttt{-{}-}pretty="\%h - \%s" \texttt{-{}-}author="Nguyen Quy" \texttt{-{}-}since=2.week }. Kết quả sẽ được:
+\item Ví dụ: lệnh để hiển thị các commit từ 2 tuần trước trở lại do Nguyen Quy tạo ra:\textcolor{blue}{\bf git log \texttt{-{}-}pretty="\%h - \%s" \texttt{-{}-}author="Nguyen Quy" \texttt{-{}-}since=2.week }. Kết quả sẽ được:
 
 	\includegraphics[width=0.8\linewidth]{screenshot024}
 
@@ -462,7 +462,7 @@ Git có một công cụ có sẵn gọi là \textbf{git config}, cho phép ta x
 	
 \section{Hủy bỏ thay đổi}
 \subsection{Undoing thing}
-Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi phần message và muốn thử lại lần commit đó thì sử dụng: {\it git commit –amend}
+Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi phần message và muốn thử lại lần commit đó thì sử dụng: \textcolor{blue}{\bf git commit –amend}
 \begin{itemize}
 \item Ban đầu ta chỉ có một tệp 6.txt mới được tạo và ta muốn thêm vào commit với tin nhắn là “commit 1”
 
@@ -470,13 +470,13 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 	\label{fig:screenshot026}
 
-\item Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh: {\it git commit \texttt{-{}-}amend}
+\item Sau đó ta thêm 1 tệp 7.txt và không muốn tách ra làm 2 commit với tệp 6.txt mà muốn thêm vào “commit 1” trước đó với lệnh: \textcolor{blue}{\bf git commit \texttt{-{}-}amend}
 
 	\includegraphics[width=0.8\linewidth]{screenshot027}
 
 	\label{fig:screenshot027}
 
-\item Kết quả trong \textit{git log} là:
+\item Kết quả trong \textcolor{blue}{\bf git log} là:
 
 	\includegraphics[width=0.8\linewidth]{screenshot028}
 	
@@ -485,8 +485,8 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 \subsection{Unstaging a staged file}
 \begin{itemize}
-\item Giả sử bạn đã chỉnh sửa hai tệp và muốn commit từng chỉnh sửa riêng, nhưng bạn vô tình gõ \textit{git add *} và tổ chức (staged) cả hai
-\item Để unstage một tập tin: {\it git reset HEAD <name>}
+\item Giả sử bạn đã chỉnh sửa hai tệp và muốn commit từng chỉnh sửa riêng, nhưng bạn vô tình gõ \textcolor{blue}{\bf git add *} và tổ chức (staged) cả hai
+\item Để unstage một tập tin: \textcolor{blue}{\bf git reset HEAD <name>}
 	\begin{itemize}
 \item Ví dụ: Hai tệp 1.txt và 2.txt đã được chỉnh sửa và đang ở trạng thái modified và thêm vào staged
 
@@ -494,7 +494,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 	\label{fig:screenshot029}
 
-\item Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh: {\it git reset HEAD 2.txt}. Kết quả sẽ là:
+\item Nhưng giờ bạn muốn chỉ commit tệp 1.txt ở đợt commit này thì bạn phải unstaging tệp 2.txt đã được staged bằng lệnh: \textcolor{blue}{\bf git reset HEAD 2.txt}. Kết quả sẽ là:
 
 	\includegraphics[width=0.8\linewidth]{screenshot030}
 
@@ -503,10 +503,10 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \subsection{Unmodifying a modified file}
 \begin{itemize}
-\item Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh: {\it git checkout \texttt{-{}-}<tên tệp>}\vskip 0.4cm
+\item Trong khi bạn làm việc, sẽ có những thay đổi trên tệp mà bạn không mong muốn, bạn muốn loại bỏ đi sự thay đổi đó để quay về với nội dung cũ thì sử dụng lệnh: \textcolor{blue}{\bf git checkout \texttt{-{}-}<tên tệp>}\vskip 0.4cm
 \item Lưu ý rằng đây là một lệnh nguy hiểm – mọi thay đổi của bạn đối với tệp sẽ bị mất. Hãy chắc chắn là bạn thực sự muốn bỏ các thay đổi vừa thực hiện
 	\begin{itemize}
-\item Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh: {\it git checkout \texttt{-{}-}2.txt}. Kết quả thu được
+\item Ví dụ: Tiếp nối ví dụ phía trên, ta đang có tệp 2.txt được chỉnh sửa, giờ bạn muốn loại bỏ đi sự thay đổi đó thì sử dụng lệnh: \textcolor{blue}{\bf git checkout \texttt{-{}-}2.txt}. Kết quả thu được
 
 	\includegraphics[width=0.8\linewidth]{screenshot031}
 
@@ -530,14 +530,14 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \item Nếu bạn đã sao chép remote của mình, bạn nên xem nguồn gốc - đó là tên mặc định mà Git cung cấp cho máy chủ mà bạn đã sao chép. 
 \item Ví dụ dưới đây ta clone một remote Repo trên github:
 	\begin{itemize}
-		\item \textit{git clone https://github.com/nguyenquy43/first.git}
-		\item \textit{git remote} (xem thông tin remote repository bạn mới lưu về máy)
+		\item \textcolor{blue}{\bf git clone https://github.com/nguyenquy43/first.git}
+		\item \textcolor{blue}{\bf git remote} (xem thông tin remote repository bạn mới lưu về máy)
 
 	\includegraphics[width=0.8\linewidth]{screenshot032}
 	
 	\label{fig:screenshot032}
 	\end{itemize}
-\item Bạn có thể dùng –v để hiển thị URL mà Git đã lưu trữ cho tên ngắn được sử dụng khi đọc và ghi vào remote đó: {\it git remote -v}
+\item Bạn có thể dùng –v để hiển thị URL mà Git đã lưu trữ cho tên ngắn được sử dụng khi đọc và ghi vào remote đó: \textcolor{blue}{\bf git remote -v}
 
 	\includegraphics[width=0.8\linewidth]{screenshot033}
 	
@@ -549,7 +549,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \subsection{Thêm remote repository} 
 \begin{itemize}
 \item Khi bạn có sẵn một repository trong máy, và bạn muốn liên kết với một remote repository
-\item Để thêm một remote repo mới dưới dạng một tên ngắn: {\it git remote add <shortname> <url>}
+\item Để thêm một remote repo mới dưới dạng một tên ngắn: \textcolor{blue}{\bf git remote add <shortname> <url>}
 \item Ví dụ: 
 \vskip 0.4cm
 	\includegraphics[width=0.8\linewidth]{screenshot034}
@@ -558,9 +558,9 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \subsection{Nạp và kéo dữ liệu từ remote repository} 
 \begin{itemize}
-\item Lệnh đi đến remote repo và kéo tất cả dữ liệu từ remote repo mà bạn chưa có: {\it git fetch <remote name>}
+\item Lệnh đi đến remote repo và kéo tất cả dữ liệu từ remote repo mà bạn chưa có: \textcolor{blue}{\bf git fetch <remote name>}
 \item Điều cần lưu ý là lệnh git fetch chỉ tải dữ liệu xuống  local repo của bạn - nó không tự động kết hợp (merge) dữ liệu đó với bất kỳ dữ liệu nào của bạn hoặc sửa đổi những gì bạn hiện đang làm việc
-\item Bạn có thể sử dụng lệnh git pull để tự động tìm nạp và sau đó hợp nhất nhánh từ xa (remote branch) đó vào nhánh hiện tại của bạn: {\it git pull <remote name> <branch name>}
+\item Bạn có thể sử dụng lệnh git pull để tự động tìm nạp và sau đó hợp nhất nhánh từ xa (remote branch) đó vào nhánh hiện tại của bạn: \textcolor{blue}{\bf git pull <remote name> <branch name>}
 \item Ví dụ: 
 	
 	\includegraphics[width=0.8\linewidth]{screenshot035}
@@ -584,7 +584,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 \subsection{Đẩy lên remote repo}
 \begin{itemize}
-\item Khi bạn có một điểm trong dự án mà bạn muốn chia sẻ, bạn phải đẩy (pushing) bằng lệnh: {\it git push <remote name> <brach name> }
+\item Khi bạn có một điểm trong dự án mà bạn muốn chia sẻ, bạn phải đẩy (pushing) bằng lệnh: \textcolor{blue}{\bf git push <remote name> <brach name> }
 \item Lệnh này chỉ hoạt động nếu bạn nhân bản (clone) từ một máy chủ mà bạn có quyền truy cập ghi và không có ai đẩy trong thời gian đó
 \item Ví dụ: Trong project second ta đã thêm một tệp text.txt và bây giờ ta cần thêm nó vào local repository và đưa nó lên kho dữ liệu
 
@@ -592,7 +592,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 	\label{fig:screenshot038}
 
-\item Sau khi đã commit, ta tiến hành đưa lên remote repository bằng lệnh: \textit{git push second master}
+\item Sau khi đã commit, ta tiến hành đưa lên remote repository bằng lệnh: \textcolor{blue}{\bf git push second master}
 
 	\includegraphics[width=0.8\linewidth]{screenshot039}
 
@@ -601,14 +601,14 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 
 \subsection{Kiểm tra ,xóa và đổi tên remotes} 
 \begin{itemize}
-\item Nếu bạn muốn xem thêm thông tin về một remote cụ thể: {\it git remote show <remote name>}
+\item Nếu bạn muốn xem thêm thông tin về một remote cụ thể: \textcolor{blue}{\bf git remote show <remote name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot040}
 
 	\label{fig:screenshot040}
 
-\item Bạn thay đổi shortname của remote: {\it git remote rename <old remote name> <new remote name>}
-\item Nếu muốn loại bỏ remote repo  bạn có thể sử dụng: {\it git remote rm <remote name> }
+\item Bạn thay đổi shortname của remote: \textcolor{blue}{\bf git remote rename <old remote name> <new remote name>}
+\item Nếu muốn loại bỏ remote repo  bạn có thể sử dụng: \textcolor{blue}{\bf git remote rm <remote name> }
 
 
 	\includegraphics[width=0.8\linewidth]{screenshot041}
@@ -626,19 +626,19 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \begin{itemize}
 \item Liệt kê thẻ
 	\begin{itemize}
-		\item Liệt kê tất cả các thẻ của bạn: \textit{git tag}
+		\item Liệt kê tất cả các thẻ của bạn: \textcolor{blue}{\bf git tag}
 		\item Bạn có thể tìm kiếm các thẻ theo một yêu cầu nhất định. 
 		\item Ví dụ, Git source repo chứa hơn 500 tags. Nếu bạn chỉ cần xem các thẻ có đầu là v.1.8.5git tag –l “v.1.8.5*”
 	\end{itemize}
 \item Tạo thẻ
 	\begin{itemize}
 		\item Git sử dụng hai loại thẻ chính: lightweight và annotated
-		\item Một thẻ lightweight (thẻ nhẹ) nó chỉ trỏ đến một commit cụ thể: {\it git tag <tag name>-lw.}
+		\item Một thẻ lightweight (thẻ nhẹ) nó chỉ trỏ đến một commit cụ thể: \textcolor{blue}{\bf git tag <tag name>-lw.}
 	\includegraphics[width=0.8\linewidth]{screenshot042}
 
 	\label{fig:screenshot042}
 
-		\item Thẻ annotated (thẻ lưu trữ) được lưu trữ dưới dạng các đối tượng đầy đủ trong Git: {\it git tag –a <tag name> -m “message”}. Bạn có thể xem dữ liệu thẻ cùng với commit đã được gắn thẻ bằng cách sử dụng: {\it git show <tag name>}
+		\item Thẻ annotated (thẻ lưu trữ) được lưu trữ dưới dạng các đối tượng đầy đủ trong Git: \textcolor{blue}{\bf git tag –a <tag name> -m “message”}. Bạn có thể xem dữ liệu thẻ cùng với commit đã được gắn thẻ bằng cách sử dụng: \textcolor{blue}{\bf git show <tag name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot043}
 
@@ -651,8 +651,8 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \begin{itemize}
 \item Bạn cũng có thẻ gắn thẻ các commit sau khi bạn đã di chuyển chúng. Để gắn thẻ commit đó:
 \begin{itemize}
-\item {\it git log \texttt{-{}-}pretty=oneline}: Lệnh này để xem lịch sử các commit ở dạng một dòng, dùng để lấy checksum ID của commit
-\item Sau đó thì thì sử dụng lệnh: {\it git tag <tag name> <checksum ID>}
+\item \textcolor{blue}{\bf git log \texttt{-{}-}pretty=oneline}: Lệnh này để xem lịch sử các commit ở dạng một dòng, dùng để lấy checksum ID của commit
+\item Sau đó thì thì sử dụng lệnh: \textcolor{blue}{\bf git tag <tag name> <checksum ID>}
 \item Ví dụ: 
 
 	\includegraphics[width=0.8\linewidth]{screenshot044}
@@ -661,9 +661,9 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \item Chia sẻ thẻ
 \begin{itemize}
-\item Lệnh \textit{git push} không thể chuyển thẻ tới máy chủ
-\item Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh: {\it git push <remote name> <tag name>}
-\item Nếu bạn có nhiều thẻ mà bạn muốn đẩy lên cùng một lúc: {\it git push <remote name> \texttt{-{}-}tags}
+\item Lệnh \textcolor{blue}{\bf git push} không thể chuyển thẻ tới máy chủ
+\item Bạn sẽ phải đẩy thẻ bằng một cách khác vào máy chủ với lệnh: \textcolor{blue}{\bf git push <remote name> <tag name>}
+\item Nếu bạn có nhiều thẻ mà bạn muốn đẩy lên cùng một lúc: \textcolor{blue}{\bf git push <remote name> \texttt{-{}-}tags}
 \item Ví dụ:
 
 	\includegraphics[width=0.8\linewidth]{screenshot045}
@@ -671,7 +671,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 	\label{fig:screenshot045}
 \end{itemize}
 
-\item Bạn không thể thực sự kiểm tra thẻ trong Git, vì chúng không thể di chuyển được. Nếu bạn muốn đặt một phiên bản của kho lưu trữ trong thư mục làm việc của bạn trông giống như một thẻ cụ thể, bạn có thể tạo một chi nhánh mới tại một thẻ cụ thể với : {\it git checkout –b <branchname> <tagname>}
+\item Bạn không thể thực sự kiểm tra thẻ trong Git, vì chúng không thể di chuyển được. Nếu bạn muốn đặt một phiên bản của kho lưu trữ trong thư mục làm việc của bạn trông giống như một thẻ cụ thể, bạn có thể tạo một chi nhánh mới tại một thẻ cụ thể với : \textcolor{blue}{\bf git checkout –b <branchname> <tagname>}
 \begin{itemize}
  \item Ví dụ: Ta có thể tạo mới một nhánh riêng có tag v1.2
 
@@ -682,8 +682,8 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \item Xóa thẻ
 \begin{itemize}
-\item Xóa thẻ ở kho dữ liệu trên máy bạn (local repo): {\it  git tag –d <tag name>}
-\item Xóa thẻ trên máy chủ lưu trữ: {\it git push <remote name> \texttt{-{}-}delete <tag name>}
+\item Xóa thẻ ở kho dữ liệu trên máy bạn (local repo): \textcolor{blue}{\bf  git tag –d <tag name>}
+\item Xóa thẻ trên máy chủ lưu trữ: \textcolor{blue}{\bf git push <remote name> \texttt{-{}-}delete <tag name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot047}
 	
@@ -697,8 +697,8 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \subsection{Tạo một nhánh mới}
 \begin{itemize}
-\item Tạo một nhánh mới bằng lệnh: {\it git branch <branch name>}
-\item Ví dụ: tạo một branch có tên là testing: \textit{git branch testing}. Điều này tạo ra một con trỏ mới cho cùng một commit mà bạn đang thực hiện
+\item Tạo một nhánh mới bằng lệnh: \textcolor{blue}{\bf git branch <branch name>}
+\item Ví dụ: tạo một branch có tên là testing: \textcolor{blue}{\bf git branch testing}. Điều này tạo ra một con trỏ mới cho cùng một commit mà bạn đang thực hiện
 
 	\includegraphics[width=0.8\linewidth]{screenshot051}
 
@@ -708,7 +708,7 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \subsection{Con trỏ HEAD đến nhánh}
 \begin{itemize}
 \item Làm thế nào để Git biết bạn hiện đang thao tác ở nhánh nào? Nó được biểu diễn bằng một con trỏ đặc biệt: HEAD
-\item Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh: {\it git log \texttt{-{}-}oneline \texttt{-{}-}decorate}
+\item Bạn có thể thấy được HEAD đang trỏ tới nhánh nào bằng lệnh: \textcolor{blue}{\bf git log \texttt{-{}-}oneline \texttt{-{}-}decorate}
 
 	\includegraphics[width=0.8\linewidth]{screenshot052}
 	
@@ -720,8 +720,8 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 	
 	\label{fig:screenshot053}
 
-\item Chuyển nhánh để di chuyển HEAD trỏ vào nhánh được chỉ định: {\it git checkout <branch name>} 
-\item Ví dụ: \textit{git checkout testing} -> chuyển HEAD trỏ sang nhánh testing
+\item Chuyển nhánh để di chuyển HEAD trỏ vào nhánh được chỉ định: \textcolor{blue}{\bf git checkout <branch name>} 
+\item Ví dụ: \textcolor{blue}{\bf git checkout testing} -> chuyển HEAD trỏ sang nhánh testing
 
 	\includegraphics[width=0.8\linewidth]{screenshot054}
 
@@ -730,21 +730,21 @@ Khi bạn commit quá sớm và quên thêm các tệp khác hoặc bị lỗi p
 \end{itemize}
 \subsection{Quản lý nhánh}
 \begin{itemize}
-\item Bạn có thể nhận được một danh sách nhánh hiện tại bằng lệnh: {\it git branch}
+\item Bạn có thể nhận được một danh sách nhánh hiện tại bằng lệnh: \textcolor{blue}{\bf git branch}
 
 	\includegraphics[width=0.8\linewidth]{screenshot055}
 	
 	\label{fig:screenshot055}
 
 \item Lưu ý ký tự * đứng trước nhánh master: nó chỉ ra nhánh mà bạn hiện đã thao tác (nhánh mà HEAD trỏ tới)
-\item Để xem lần commit cuối cùng trên mỗi nhánh: {\it git branch –v}
-\item Các tùy chọn \texttt{-{}-}merged và \texttt{-{}-}no-merged có thể lọc danh sách gồm các nhánh đã hoặc chưa được kết hợp (merge) vào nhánh hiện đang truy cập: {\it git branch \texttt{-{}-}merged} và{\it git branch \texttt{-{}-}no-merged}
+\item Để xem lần commit cuối cùng trên mỗi nhánh: \textcolor{blue}{\bf git branch –v}
+\item Các tùy chọn \texttt{-{}-}merged và \texttt{-{}-}no-merged có thể lọc danh sách gồm các nhánh đã hoặc chưa được kết hợp (merge) vào nhánh hiện đang truy cập: \textcolor{blue}{\bf git branch \texttt{-{}-}merged} và\textcolor{blue}{\bf git branch \texttt{-{}-}no-merged}
 
 	\includegraphics[width=0.8\linewidth]{screenshot056}
 
 	\label{fig:screenshot056}
 
-\item Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh: {\it git branch –D <branch name>}
+\item Nếu bạn thật sự muốn xóa một nhánh và công việc đang thực hiện trên nhánh đó thì có thể sử dụng lệnh: \textcolor{blue}{\bf git branch –D <branch name>}
 
 	\includegraphics[width=0.8\linewidth]{screenshot057}
 
@@ -782,15 +782,15 @@ Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này t
 
 	\label{fig:screenshot060}	
 
-\item Merge 2 nhánh sẽ được thực hiện bằng lệnh merge: {\it git merge <branch name>.}
+\item Merge 2 nhánh sẽ được thực hiện bằng lệnh merge: \textcolor{blue}{\bf git merge <branch name>.}
 \item Đầu tiên, sử dụng lệnh git checkout master để chuyển con trỏ HEAD đến nhánh master	
 
 	\includegraphics[width=0.8\linewidth]{screenshot061}
 
 	\label{fig:screenshot061}
 
-\item Tệp được chỉnh sửa là tệp issue.txt có nội dung: {\it ''  Đây là nội dung gốc ''}	
-\item Chỉnh sửa tệp issue.txt trong branch issue1: {\it '' Đây là nội dung chỉnh sửa ''}
+\item Tệp được chỉnh sửa là tệp issue.txt có nội dung: \textcolor{blue}{\bf ''  Đây là nội dung gốc ''}	
+\item Chỉnh sửa tệp issue.txt trong branch issue1: \textcolor{blue}{\bf '' Đây là nội dung chỉnh sửa ''}
 \item Ta thực hiện tích hợp sự thay đổi trong tệp issue.txt giữa 2 nhánh
 
 	\includegraphics[width=0.8\linewidth]{screenshot01}
@@ -854,27 +854,27 @@ Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này t
 \section{Remote branches}
 \subsection{Thiết lập ví dụ}
 \begin{itemize}
-\item Tại đường dẫn {\it /q/BT/example/remote} tạo một remote repo trên máy local bằng lệnh {\it git init \texttt{-{}-}bare}
+\item Tại đường dẫn \textcolor{blue}{\bf /q/BT/example/remote} tạo một remote repo trên máy local bằng lệnh \textcolor{blue}{\bf git init \texttt{-{}-}bare}
 \item Ta có một local repo tên local với snapshot như hình
 
 	\includegraphics[width=0.8\linewidth]{screenshot065}
 	
 	\label{fig:screenshot065}
 
-\item Tiến hành thiết lập remote cho nó bằng lệnh: {\it git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là {\it /q/BT/example/remote}
+\item Tiến hành thiết lập remote cho nó bằng lệnh: \textcolor{blue}{\bf git remote add <remote  name> <address>} đặt tên remote là origin với địa chỉ là \textcolor{blue}{\bf /q/BT/example/remote}
 
 	\includegraphics[width=0.8\linewidth]{screenshot066}
 
 	\label{fig:screenshot066}
 	
-\item Tiến hành push tất cả dữ liệu từ repo local lên remote repo: {\it git push \texttt{-{}-}all origin}
+\item Tiến hành push tất cả dữ liệu từ repo local lên remote repo: \textcolor{blue}{\bf git push \texttt{-{}-}all origin}
 
 	
 	\includegraphics[width=0.8\linewidth]{screenshot07}
 
 	\label{fig:screenshot07}
 
-\item Clone (nhân bản) từ remote repo: {\it git clone <address remote repo> <address clone>}
+\item Clone (nhân bản) từ remote repo: \textcolor{blue}{\bf git clone <address remote repo> <address clone>}
 \item Các ví dụ sẽ được lấy từ repo clone
 \item Trong một Local Repo, nếu Remote đặt tên là remotename, và một nhánh tên là branchname thì để biểu thị nhánh này trên Remote sẽ ký hiệu là remotename/branchename. Trạng thái sau khi nhân bản (clone)
 \end{itemize}
@@ -896,7 +896,7 @@ Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này t
 \end{itemize}
 \subsection{Sự phân nhánh tại Local khi Remote cập nhật} 
 \begin{itemize}
-\item Giả sử ở repo local, có thêm 2 commit mới là snapshot C3, C4, sau đó cập nhật nhánh master lên remote: {\it git push origin master}
+\item Giả sử ở repo local, có thêm 2 commit mới là snapshot C3, C4, sau đó cập nhật nhánh master lên remote: \textcolor{blue}{\bf git push origin master}
 
 
  	\includegraphics[width=0.8\linewidth]{screenshot069}
@@ -916,7 +916,7 @@ Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này t
  
  	\label{fig:screenshot072}
 
-\item Tiếp theo, sử dụng lệnh {\it git fetch \texttt{-{}-}all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái
+\item Tiếp theo, sử dụng lệnh \textcolor{blue}{\bf git fetch \texttt{-{}-}all} để  tìm trong origin những dữ liệu mới sau đó cập nhật dữ liệu vào repo clone và kiểm tra trạng thái
 
  	\includegraphics[width=0.8\linewidth]{screenshot073}
  
@@ -947,19 +947,19 @@ Merge branch tức là bạn gộp hai branch lại với nhau, thao tác này t
 
  	\label{fig:screenshot077}
 
-\item Xóa nhánh tại remote: {\it \hspace{1cm} \$ git push remotename \texttt{-{}-}delete branchname}
+\item Xóa nhánh tại remote: \textcolor{blue}{\bf \hspace{1cm} \$ git push remotename \texttt{-{}-}delete branchname}
  
 \item Đổi tên nhánh local và remote
 \begin{itemize}
-	\item Đổi tên ở Local: {\it git branch -m old\_branch new\_branch}
-  	\item Xóa nhánh ở Remote: {\it git push origin :old\_branch}
-  	\item Cập nhật nhánh có tên mới lên  Remote: {\it git push \texttt{-{}-}set-upstream origin new\_branch}
+	\item Đổi tên ở Local: \textcolor{blue}{\bf git branch -m old\_branch new\_branch}
+  	\item Xóa nhánh ở Remote: \textcolor{blue}{\bf git push origin :old\_branch}
+  	\item Cập nhật nhánh có tên mới lên  Remote: \textcolor{blue}{\bf git push \texttt{-{}-}set-upstream origin new\_branch}
 \end{itemize}
 \item Cập nhật nhánh mới từ remote vào local
  	\begin{itemize}
- 	\item Cập nhật thông tin từ Remote: {\it git pull origin}
-	\item Liệt kê các nhánh ở Remote: {\it git branch -r}
-  	\item Tạo nhánh mới ở Local theo Remote: {\it git checkout -b branchname  origin/branchname}
+ 	\item Cập nhật thông tin từ Remote: \textcolor{blue}{\bf git pull origin}
+	\item Liệt kê các nhánh ở Remote: \textcolor{blue}{\bf git branch -r}
+  	\item Tạo nhánh mới ở Local theo Remote: \textcolor{blue}{\bf git checkout -b branchname  origin/branchname}
  \end{itemize}\end{itemize}
 
 \newpage
